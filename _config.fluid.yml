@@ -6,7 +6,7 @@
 # Navigation Bar
 #---------------------------
 navbar:
-  blog_title: "Your Name"
+  blog_title: "Lorenzo Vicino"
 
   # Navigation menu - customize for portfolio
   menu:
@@ -29,7 +29,7 @@ index:
   # Slogan/subtitle on home page
   slogan:
     enable: true
-    text: "Full Stack Developer | Creative Thinker | Problem Solver"
+    text: "FullStack Developer | Design Patterns Enthusiast | Running & Tennis Lover"
 
   # Typing animation for subtitle
   typing:
@@ -51,17 +51,15 @@ about:
   avatar: /img/avatar.png
 
   # Your name
-  name: "Your Name"
+  name: "Lorenzo Vicino"
 
   # Your introduction
-  intro: "Full Stack Developer passionate about creating elegant solutions to complex problems"
+  intro: "FullStack Developer passionate about design patterns and building scalable applications"
 
   # Social links - customize with your actual links
   icons:
-    - { class: "iconfont icon-github-fill", link: "https://github.com/yourusername", tip: "GitHub" }
-    - { class: "iconfont icon-linkedin-fill", link: "https://linkedin.com/in/yourusername", tip: "LinkedIn" }
-    - { class: "iconfont icon-twitter-fill", link: "https://twitter.com/yourusername", tip: "Twitter" }
-    - { class: "iconfont icon-mail-fill", link: "mailto:your.email@example.com", tip: "Email" }
+    - { class: "iconfont icon-github-fill", link: "https://github.com/LorenzoVicino", tip: "GitHub" }
+    - { class: "iconfont icon-linkedin-fill", link: "https://linkedin.com/in/lorenzo-vicino-9152871aa", tip: "LinkedIn" }
 
 #---------------------------
 # Custom Pages (Projects, etc)

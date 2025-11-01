@@ -4,71 +4,99 @@ date: 2025-11-01
 layout: about
 ---
 
-## Hello! I'm [Your Name]
+## Hello! I'm Lorenzo Vicino
 
-I'm a passionate Full Stack Developer with [X] years of experience building web applications and solving complex problems through code. I love creating elegant, user-friendly solutions that make a difference.
+I'm a passionate FullStack Developer, 23 years old, based in Gravina in Puglia, Italy. I love building scalable applications and crafting elegant solutions to complex problems. Currently focusing on mastering full-stack development while working on the **GTFleet 365** platform at **Macnil GT Alarm**.
 
 ### What I Do
 
-I specialize in:
+I specialize in building modern web applications using:
 
-- **Frontend Development:** React, Vue.js, TypeScript, HTML/CSS
-- **Backend Development:** Node.js, Python, Django, Express
-- **Databases:** PostgreSQL, MongoDB, MySQL
-- **DevOps:** Docker, CI/CD, AWS, Git
-- **Mobile Development:** React Native, Flutter
+**Frontend Development:**
+- React & Redux
+- JavaScript & TypeScript
+- HTML5 & CSS3
+- Modern UI/UX design
+
+**Backend Development:**
+- Java & Spring Framework
+- Node.js
+- RESTful API design
+- Microservices architecture
+
+**Databases:**
+- PostgreSQL
+- MongoDB
+- MySQL
+- Apache Cassandra
+
+**DevOps & Cloud:**
+- AWS (Amazon Web Services)
+- Docker & Containerization
+- Linux systems
+- CI/CD pipelines
 
 ### My Journey
 
-I started my journey in software development [describe your background]. Over the years, I've had the opportunity to work on diverse projects ranging from [types of projects].
+My passion for software development drives me to continuously learn and improve. I'm particularly interested in **design patterns** and software architecture - [refactoring.guru](https://refactoring.guru) is one of my favorite resources for deepening my understanding of clean code and best practices.
 
-### Skills & Expertise
+Currently, I'm working on the GTFleet 365 platform, where I apply my full-stack skills to build robust, scalable solutions for fleet management.
+
+### Technical Skills
 
 **Programming Languages:**
-- JavaScript/TypeScript
-- Python
+- JavaScript / TypeScript
 - Java
-- C++
+- C#
+- HTML5 / CSS3
 
 **Frameworks & Libraries:**
-- React.js & Next.js
-- Vue.js & Nuxt.js
-- Node.js & Express
-- Django & Flask
+- React & Redux
+- Spring Framework
+- Node.js
 
 **Tools & Technologies:**
 - Git & GitHub
-- Docker & Kubernetes
-- AWS & Azure
-- MongoDB & PostgreSQL
+- Docker
+- Postman
+- Figma
+- RabbitMQ
+- AWS
 
-### Education
+**Databases:**
+- PostgreSQL
+- MongoDB
+- MySQL
+- Apache Cassandra
 
-**[Degree Name]**
-[University Name], [Year]
+### Current Focus
 
-**Certifications:**
-- [Certification Name] - [Year]
-- [Certification Name] - [Year]
+- 🎯 **Goal:** Full stack development mastery
+- 💼 **Working on:** GTFleet 365 platform
+- 📚 **Learning:** Advanced design patterns and system architecture
+- 🌱 **Growing:** Cloud-native application development
 
-### Interests
+### Beyond Code
 
 When I'm not coding, you can find me:
 
-- Reading tech blogs and staying updated with latest technologies
-- Contributing to open source projects
-- Writing technical blog posts
-- [Your hobbies/interests]
+- 🏃 **Running** - Staying active and pushing my limits
+- 🎾 **Playing Tennis** - Enjoying competitive sports
+- 📖 **Reading** tech blogs and staying updated with latest technologies
+- 🎨 **Exploring** design patterns and software architecture
+
+### My Philosophy
+
+I believe in writing clean, maintainable code that follows best practices and design patterns. Good software is not just about making things work - it's about creating solutions that are elegant, scalable, and easy to understand.
 
 ### Let's Connect!
 
-I'm always interested in hearing about new projects and opportunities. Feel free to reach out!
+I'm always interested in discussing new technologies, design patterns, and exciting projects. Feel free to reach out!
 
-- **Email:** [your.email@example.com](mailto:your.email@example.com)
-- **GitHub:** [github.com/yourusername](https://github.com/yourusername)
-- **LinkedIn:** [linkedin.com/in/yourusername](https://linkedin.com/in/yourusername)
-- **Twitter:** [@yourusername](https://twitter.com/yourusername)
+- **GitHub:** [github.com/LorenzoVicino](https://github.com/LorenzoVicino)
+- **LinkedIn:** [linkedin.com/in/lorenzo-vicino-9152871aa](https://linkedin.com/in/lorenzo-vicino-9152871aa)
+- **Location:** Gravina in Puglia, Italy
 
 ---
 
-*Looking for my resume? [Download it here](/resume.pdf)*
+*Looking to collaborate or have a question? Don't hesitate to connect with me on LinkedIn or GitHub!*
