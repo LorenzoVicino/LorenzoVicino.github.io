@@ -8,9 +8,17 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 0;
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   pointer-events: none;
+}
+
+/* Make sure body content is above canvas */
+body > #board,
+body > .container,
+#banner {
+  position: relative;
+  z-index: 1;
 }
 
 /* Ensure content is readable over the particles background */
@@ -68,12 +76,37 @@ body {
 }
 
 /* Hide the default banner image on homepage */
-.index-page #banner {
+body.index #banner,
+.index-page #banner,
+#banner.full_bg {
   background-image: none !important;
+  background: transparent !important;
+}
+
+#banner::before,
+#banner::after {
+  background-image: none !important;
+  background: transparent !important;
+}
+
+/* Hide banner parallax image */
+.banner-parallax,
+#banner .banner-parallax,
+#banner .full-bg-img {
+  background-image: none !important;
+  opacity: 0 !important;
+  display: none !important;
 }
 
 /* Ensure navbar is above particles */
 #navbar {
   position: relative;
   z-index: 100;
+}
+
+/* Ensure banner content is above particles */
+#banner .banner-text,
+#banner .banner-content {
+  position: relative;
+  z-index: 50;
 }
