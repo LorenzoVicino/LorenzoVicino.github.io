@@ -1,0 +1,82 @@
+/**
+ * Terminal Background Styles
+ */
+
+#terminal-bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #000;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+/* Ensure content is readable over the terminal background */
+body {
+  position: relative;
+}
+
+/* Add slight backdrop blur for better text readability on homepage */
+#banner {
+  position: relative;
+}
+
+#banner .banner-text {
+  text-shadow:
+    0 0 10px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(0, 0, 0, 0.7),
+    2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Make sure the typing animation text is visible */
+#subtitle {
+  text-shadow:
+    0 0 10px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(0, 0, 0, 0.7),
+    2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Enhance visibility of main content */
+.index-card {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Dark mode adjustments */
+[data-user-color-scheme='dark'] #terminal-bg-canvas {
+  opacity: 0.6;
+}
+
+[data-user-color-scheme='dark'] .index-card {
+  background-color: rgba(30, 30, 30, 0.95) !important;
+}
+
+/* Smooth transition when canvas appears */
+#terminal-bg-canvas {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.85;
+  }
+}
+
+[data-user-color-scheme='dark'] #terminal-bg-canvas {
+  animation: fadeInDark 1s ease-in;
+}
+
+@keyframes fadeInDark {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
