@@ -205,3 +205,17 @@ lazyload:
   loading_img: /img/loading.gif
   onlypost: false
   offset_factor: 2
+
+#---------------------------
+# Custom CSS & JS
+#---------------------------
+# Inject custom HTML to head or bottom
+custom_html: ''
+
+# Custom CSS (loaded after theme CSS)
+custom_css:
+  - /css/particles-bg.css
+
+# Custom JS (loaded at the end of body)
+custom_js:
+  - /js/particles-bg.js
