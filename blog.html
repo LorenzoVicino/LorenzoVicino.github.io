@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog by Lorenzo Vicino - Read about full-stack development, design patterns, and software engineering best practices.">
+    <meta name="keywords" content="Blog, Full Stack Development, Design Patterns, Software Engineering, Lorenzo Vicino">
+    <meta name="author" content="Lorenzo Vicino">
+    <title>Blog - Lorenzo Vicino</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#60a5fa',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Canvas for particles background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-primary">Lorenzo Vicino</a>
+
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="blog.html" class="nav-link active">Blog</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2">
+                <a href="index.html" class="block py-2 nav-link">Home</a>
+                <a href="about.html" class="block py-2 nav-link">About</a>
+                <a href="projects.html" class="block py-2 nav-link">Projects</a>
+                <a href="blog.html" class="block py-2 nav-link active">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-12">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+                <span class="text-primary">Blog</span>
+            </h1>
+            <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                Thoughts on full-stack development, design patterns, and software engineering
+            </p>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="py-12 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <article class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 md:p-12 border border-gray-200 dark:border-gray-700">
+                    <div class="mb-6">
+                        <span class="text-sm text-primary font-semibold">November 1, 2025</span>
+                        <span class="text-gray-400 mx-2">•</span>
+                        <span class="text-sm text-gray-600 dark:text-gray-400">General</span>
+                    </div>
+
+                    <h2 class="text-4xl font-bold mb-6">Welcome to My Portfolio & Blog</h2>
+
+                    <div class="content-section">
+                        <h2>Welcome!</h2>
+                        <p>
+                            Hello and welcome to my portfolio and blog! I'm Lorenzo Vicino, a 23-year-old FullStack Developer from Italy, and I'm excited to share my journey, projects, and thoughts on software development with you.
+                        </p>
+
+                        <h3>About This Site</h3>
+                        <p>
+                            This site serves as both my <strong>portfolio</strong> and <strong>blog</strong>, where I document my learning journey, share insights about software development, and showcase the projects I'm passionate about.
+                        </p>
+
+                        <h3>What You'll Find Here</h3>
+
+                        <h4 class="text-lg font-semibold mt-4 mb-2">Professional Work</h4>
+                        <p>
+                            I'm currently working on the <strong>GTFleet 365</strong> platform at <strong>Macnil GT Alarm</strong>, where I apply my full-stack skills to build robust fleet management solutions.
+                        </p>
+
+                        <h4 class="text-lg font-semibold mt-4 mb-2">Projects</h4>
+                        <p>
+                            Check out my <a href="projects.html" class="text-primary hover:underline">Projects</a> page to see what I've been building:
+                        </p>
+                        <ul>
+                            <li><strong>pickMe-website</strong>: React & Redux learning project</li>
+                            <li><strong>blockchain-v1</strong>: Blockchain implementation in Java</li>
+                            <li><strong>report-engine</strong>: Java-based reporting system</li>
+                            <li>And more!</li>
+                        </ul>
+
+                        <h4 class="text-lg font-semibold mt-4 mb-2">About Me</h4>
+                        <p>
+                            Learn more about my background, skills, and interests on my <a href="about.html" class="text-primary hover:underline">About</a> page. Spoiler: I'm passionate about design patterns and love running and tennis!
+                        </p>
+
+                        <h4 class="text-lg font-semibold mt-4 mb-2">Blog Posts</h4>
+                        <p>I regularly write about:</p>
+                        <ul>
+                            <li>Full-stack development techniques</li>
+                            <li>Design patterns and clean code principles</li>
+                            <li>Lessons learned from real-world projects</li>
+                            <li>New technologies I'm exploring (AWS, Docker, React, Spring)</li>
+                            <li>My journey in software development</li>
+                        </ul>
+
+                        <h3>My Focus Areas</h3>
+                        <p>Currently, I'm diving deep into:</p>
+                        <ul>
+                            <li><strong>Design Patterns:</strong> Studying software architecture and clean code principles from resources like <a href="https://refactoring.guru" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">refactoring.guru</a></li>
+                            <li><strong>Cloud Development:</strong> Building scalable applications with AWS</li>
+                            <li><strong>Microservices:</strong> Exploring distributed system architecture</li>
+                            <li><strong>Full-Stack Mastery:</strong> Continuously improving both frontend and backend skills</li>
+                        </ul>
+
+                        <h3>My Tech Stack</h3>
+                        <p><strong>Frontend:</strong> React, Redux, JavaScript, TypeScript, HTML5, CSS3</p>
+                        <p><strong>Backend:</strong> Java, Spring Framework, Node.js</p>
+                        <p><strong>Databases:</strong> PostgreSQL, MongoDB, MySQL, Apache Cassandra</p>
+                        <p><strong>DevOps:</strong> Docker, AWS, Linux, Git</p>
+                        <p><strong>Tools:</strong> Postman, Figma, RabbitMQ</p>
+
+                        <h3>What Makes Me Tick</h3>
+                        <p>I believe that good software is not just about making things work—it's about creating solutions that are:</p>
+                        <ul>
+                            <li><strong>Elegant:</strong> Clean, readable, and maintainable code</li>
+                            <li><strong>Scalable:</strong> Built to grow and adapt</li>
+                            <li><strong>Well-designed:</strong> Following proven patterns and best practices</li>
+                            <li><strong>Performant:</strong> Optimized for speed and efficiency</li>
+                        </ul>
+
+                        <h3>Let's Connect!</h3>
+                        <p>I love connecting with fellow developers, tech enthusiasts, and anyone interested in software development. Feel free to:</p>
+                        <ul>
+                            <li>Browse my <a href="projects.html" class="text-primary hover:underline">projects</a> and provide feedback</li>
+                            <li>Connect with me on <a href="https://linkedin.com/in/lorenzo-vicino-9152871aa" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">LinkedIn</a></li>
+                            <li>Check out my code on <a href="https://github.com/LorenzoVicino" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">GitHub</a></li>
+                        </ul>
+
+                        <h3>What's Coming Next?</h3>
+                        <p>I'm planning to write about:</p>
+                        <ol class="list-decimal ml-6">
+                            <li><strong>Design Patterns in Practice</strong> - Real-world applications of design patterns</li>
+                            <li><strong>Full-Stack Architecture</strong> - Building scalable web applications</li>
+                            <li><strong>Clean Code Principles</strong> - Writing maintainable and elegant code</li>
+                            <li><strong>Cloud-Native Development</strong> - Leveraging AWS for modern applications</li>
+                            <li><strong>Career Growth</strong> - My journey and learnings as a developer</li>
+                        </ol>
+
+                        <h3>A Bit Personal</h3>
+                        <p>When I'm not immersed in code, you'll find me:</p>
+                        <ul>
+                            <li>Running through the streets of Gravina in Puglia</li>
+                            <li>On the tennis court</li>
+                            <li>Reading about new technologies and best practices</li>
+                            <li>Always learning and growing</li>
+                        </ul>
+
+                        <div class="mt-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-primary">
+                            <p class="italic">
+                                Thanks for visiting! This is just the beginning of my journey in sharing knowledge and experiences. Stay tuned for more content about software development, design patterns, and the exciting world of technology.
+                            </p>
+                            <p class="mt-4 italic">
+                                Feel free to reach out—I'm always open to interesting conversations about tech, projects, or even running and tennis!
+                            </p>
+                            <p class="mt-4 font-semibold">- Lorenzo Vicino</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">FullStack Developer | Design Pattern Enthusiast | Based in Italy</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-sm px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full">introduction</span>
+                            <span class="text-sm px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full">personal</span>
+                            <span class="text-sm px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full">full-stack</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- More Posts Coming Soon -->
+                <div class="mt-12 text-center p-12 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <h3 class="text-2xl font-bold mb-2">More Posts Coming Soon!</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Stay tuned for more articles about full-stack development, design patterns, and software engineering best practices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA (Optional) -->
+    <section class="py-20 bg-primary relative z-10">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">Let's Stay Connected</h2>
+            <p class="text-xl text-white/90 max-w-2xl mx-auto mb-8">
+                Follow me on GitHub and LinkedIn for updates on my projects and blog posts.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://github.com/LorenzoVicino" target="_blank" rel="noopener noreferrer" class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Follow on GitHub
+                </a>
+                <a href="https://linkedin.com/in/lorenzo-vicino-9152871aa" target="_blank" rel="noopener noreferrer" class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Connect on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 dark:bg-gray-800 py-8 relative z-10">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://github.com/LorenzoVicino" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+                <a href="https://linkedin.com/in/lorenzo-vicino-9152871aa" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+                </a>
+            </div>
+            <p class="text-gray-600 dark:text-gray-400">
+                <span id="timeDate">Loading...</span> |
+                <span id="times">Loading...</span>
+            </p>
+            <p class="text-gray-600 dark:text-gray-400 mt-2">
+                &copy; 2025 Lorenzo Vicino. Built with HTML, CSS & JavaScript.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
