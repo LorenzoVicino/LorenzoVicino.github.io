@@ -162,6 +162,23 @@ ul {
     margin-top: 1.25rem;
 }
 
+.feature-list {
+    margin: 1rem 0 0;
+    padding-left: 1.2rem;
+}
+
+.feature-list li + li {
+    margin-top: 0.45rem;
+}
+
+.quote {
+    margin: 0;
+    padding-left: 1rem;
+    border-left: 2px solid var(--line);
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
 .footer {
     margin-top: 4rem;
     padding-top: 1rem;
