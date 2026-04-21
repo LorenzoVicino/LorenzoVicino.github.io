@@ -26,15 +26,11 @@ jobs:
 
       - name: Prepare static files
         run: |
-          mkdir -p site/css
+          mkdir -p site
           cp index.html site/
-          cp about.html site/
-          cp projects.html site/
-          cp blog.html site/
           cp 404.html site/
           cp robots.txt site/
           cp sitemap.xml site/
-          cp css/style.css site/css/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
