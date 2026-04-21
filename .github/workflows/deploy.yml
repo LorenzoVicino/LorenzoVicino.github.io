@@ -31,6 +31,7 @@ jobs:
           cp 404.html site/
           cp robots.txt site/
           cp sitemap.xml site/
+          cp -r images site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

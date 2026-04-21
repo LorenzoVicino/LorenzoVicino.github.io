@@ -173,6 +173,10 @@
   .marq .rail .cell .k{font-family:var(--font-mono); color:rgba(255,255,255,.4); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px}
   .marq .bot a{color:#fff; text-decoration:none; letter-spacing:0.02em}
   .marq .bot a:hover{color:var(--accent)}
+  .marq .shots{grid-column:1 / -1; display:grid; grid-template-columns:repeat(3,1fr); gap:var(--gut); margin-top:8px}
+  .marq .shots figure{margin:0; display:flex; flex-direction:column; gap:8px}
+  .marq .shots img{width:100%; aspect-ratio:4/3; object-fit:cover; display:block; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.12)}
+  .marq .shots figcaption{font-family:var(--font-mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,.55)}
   @media (max-width:900px){
     .marq{grid-column:1 / -1}
     .feat-meta{grid-column:1 / -1 !important}
@@ -180,6 +184,7 @@
     .marq .rail{grid-column:1 / -1; flex-direction:row; flex-wrap:wrap; gap:20px}
     .marq .rail .cell{flex:1 1 220px}
     .marq .top, .marq .bot{flex-direction:column; gap:6px; align-items:flex-start}
+    .marq .shots{grid-template-columns:1fr}
   }
 
   /* STACK TABLE */
@@ -326,6 +331,11 @@
         <div class="cell"><div class="k">Data</div>City-scoped PostgreSQL model, GTFS import via zip</div>
         <div class="cell"><div class="k">App</div>Next.js, catalog generation, map of stops &amp; routes</div>
         <div class="cell"><div class="k">APIs</div>departures · bookings · itineraries · purchase · validate</div>
+      </div>
+      <div class="shots">
+        <figure><img src="images/menu-gtfs.jpg" alt="GTFS platform menu" loading="lazy"><figcaption>Menu</figcaption></figure>
+        <figure><img src="images/gtfs-bari.jpg" alt="Bari stops and routes map" loading="lazy"><figcaption>Map — Bari</figcaption></figure>
+        <figure><img src="images/biglietto.jpg" alt="Digital ticket with signed QR" loading="lazy"><figcaption>Ticket</figcaption></figure>
       </div>
       <div class="bot">
         <span>Signed QR validation</span>
