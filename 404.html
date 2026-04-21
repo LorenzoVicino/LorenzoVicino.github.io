@@ -1,41 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Page not found.">
-    <title>404 | Lorenzo Vicino</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Page not found.">
+<title>404 | Lorenzo Vicino</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --ink:#111111; --muted:#6b6b6b;
+    --rule:#111111; --rule-soft:#e4e4e4; --accent:#e63321; --accent-ink:#ffffff;
+    --font-sans:"Inter Tight","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
+    --pad-x: clamp(20px, 4vw, 56px); --max: 1280px;
+  }
+  *{box-sizing:border-box} html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink); font-family:var(--font-sans);
+    font-size:15px; line-height:1.5; -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  ::selection{background:var(--accent); color:var(--accent-ink)}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad-x)}
+  .nav{padding:28px 0 16px; border-bottom:1px solid var(--rule); margin-bottom:clamp(32px,5vw,56px); font-size:16px; font-weight:500; letter-spacing:-0.01em}
+  .nav a{text-decoration:none; color:var(--ink)}
+  .nav .sub{color:var(--muted); font-weight:400; margin-left:6px}
+  .hero{padding:clamp(40px,8vw,120px) 0}
+  .hero .code{font-family:var(--font-mono); font-size:13px; font-weight:500; letter-spacing:0.04em; color:var(--muted); margin-bottom:12px}
+  .hero h1{margin:0 0 16px; font-size:clamp(32px,5vw,56px); line-height:1; letter-spacing:-0.035em; font-weight:500}
+  .hero p{margin:0 0 24px; font-size:15px; color:var(--muted); max-width:36ch}
+  .hero a{text-decoration:none; font-size:13px; font-family:var(--font-mono); letter-spacing:0.02em; border-bottom:1px solid var(--rule-soft); padding-bottom:2px; transition:border-color .15s, color .15s}
+  .hero a:hover{color:var(--accent); border-bottom-color:var(--accent)}
+  .foot{padding:22px 0 32px; border-top:1px solid var(--rule); margin-top:clamp(40px,5vw,64px); font-size:11px; color:var(--muted); letter-spacing:0.06em; text-transform:uppercase; font-family:var(--font-mono)}
+  body.dark{--bg:#0f0f10; --ink:#ececea; --muted:#7a7a7a; --rule:#ececea; --rule-soft:#2a2a2c}
+</style>
 </head>
 <body>
-    <div class="site">
-        <header class="site-header">
-            <a class="brand" href="index.html">Lorenzo Vicino</a>
-            <nav class="site-nav" aria-label="Primary">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="blog.html">Notes</a>
-            </nav>
-        </header>
-
-        <main>
-            <p class="kicker">404</p>
-            <h1 class="page-title">That page is not here.</h1>
-            <p class="page-intro">
-                Try the homepage, selected projects, or short notes instead.
-            </p>
-
-            <div class="inline-links">
-                <a href="index.html">Go home</a>
-                <a href="projects.html">View projects</a>
-                <a href="blog.html">Read notes</a>
-            </div>
-        </main>
-
-        <footer class="footer">
-            <p><a href="https://github.com/LorenzoVicino" target="_blank" rel="noopener noreferrer">GitHub</a> and <a href="https://linkedin.com/in/lorenzo-vicino-9152871aa" target="_blank" rel="noopener noreferrer">LinkedIn</a> are still reachable.</p>
-        </footer>
-    </div>
+<div class="wrap">
+  <div class="nav"><a href="/">Lorenzo Vicino<span class="sub">— Software developer</span></a></div>
+  <div class="hero">
+    <div class="code">404</div>
+    <h1>That page is not here.</h1>
+    <p>Try the homepage instead — everything lives on one page now.</p>
+    <a href="/">← Back to index</a>
+  </div>
+  <footer class="foot">© 2026 Lorenzo Vicino</footer>
+</div>
+<script>
+  try {
+    var saved = localStorage.getItem('lv-theme');
+    var dark = saved === 'dark' || (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (dark) document.body.classList.add('dark');
+  } catch(e){}
+</script>
 </body>
 </html>
