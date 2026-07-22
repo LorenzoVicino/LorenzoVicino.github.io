@@ -144,8 +144,13 @@
   .feat-meta{margin-top:14px; font-size:13px; line-height:1.7}
   .feat-meta .t{font-weight:500}
   .feat-meta .s{color:var(--muted); margin-top:8px; font-size:12px; font-family:var(--font-mono); letter-spacing:0.02em}
+  .project-index{margin-top:18px; display:flex; flex-direction:column; gap:12px}
+  .project-index a{display:block; text-decoration:none; font-size:12px; line-height:1.45}
+  .project-index a:hover .project-index-title{color:var(--accent)}
+  .project-index-n{display:block; color:var(--muted); font-family:var(--font-mono); font-size:10px; letter-spacing:.08em; margin-bottom:2px}
+  .project-index-title{transition:color .15s}
+  .projects{grid-column:4 / span 9; display:grid; gap:clamp(24px, 3vw, 40px)}
   .marq{
-    grid-column:4 / span 9;
     background:var(--panel); color:var(--panel-ink);
     padding:clamp(24px, 3vw, 40px);
     display:grid; grid-template-columns:repeat(6, 1fr); column-gap:var(--gut); row-gap:clamp(16px,2vw,24px);
@@ -177,8 +182,12 @@
   .marq .shots figure{margin:0; display:flex; flex-direction:column; gap:8px}
   .marq .shots img{width:100%; aspect-ratio:4/3; object-fit:cover; display:block; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.12)}
   .marq .shots figcaption{font-family:var(--font-mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,.55)}
+  .marq .demo{grid-column:1 / -1; margin:8px 0 0; display:flex; flex-direction:column; gap:8px}
+  .marq .demo img{width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:#0b0b0c; border:1px solid rgba(255,255,255,.12)}
+  .marq .demo figcaption{font-family:var(--font-mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,.55)}
+  .marq[id]{scroll-margin-top:20px}
   @media (max-width:900px){
-    .marq{grid-column:1 / -1}
+    .projects{grid-column:1 / -1}
     .feat-meta{grid-column:1 / -1 !important}
     .marq .lead{grid-column:1 / -1}
     .marq .rail{grid-column:1 / -1; flex-direction:row; flex-wrap:wrap; gap:20px}
@@ -314,33 +323,63 @@
     <div class="idx">
       <div class="idxN">02</div><div class="idxL">Featured</div>
       <div class="feat-meta">
-        <div class="t">GTFS Multicity<br>Ticketing</div>
-        <div class="s">2026 — ongoing<br>University thesis project<br>Open source</div>
+        <div class="t">Selected projects</div>
+        <div class="s">2026 — ongoing<br>Local-first tools<br>Open source</div>
+        <div class="project-index" aria-label="Featured projects">
+          <a href="#repo-control"><span class="project-index-n">№01</span><span class="project-index-title">repo-control</span></a>
+          <a href="#gtfs-hub"><span class="project-index-n">№02</span><span class="project-index-title">GTFS Multicity Ticketing</span></a>
+        </div>
       </div>
     </div>
-    <div class="marq">
-      <div class="top">
-        <span>Project №01</span>
-        <span>PostgreSQL · Next.js · Docker · GTFS</span>
-      </div>
-      <div class="lead">
-        <h2>A multi-city platform for public transport.</h2>
-        <p>Schedules, itinerary handling with transfers, and digital ticket purchase and signed QR validation — joined by a city-scoped PostgreSQL model and a full-stack Next.js app. Started in 2026 as my university thesis project, and still actively in development.</p>
-      </div>
-      <div class="rail">
-        <div class="cell"><div class="k">Data</div>City-scoped PostgreSQL model, GTFS import via zip</div>
-        <div class="cell"><div class="k">App</div>Next.js, catalog generation, map of stops &amp; routes</div>
-        <div class="cell"><div class="k">APIs</div>departures · bookings · itineraries · purchase · validate</div>
-      </div>
-      <div class="shots">
-        <figure><img src="images/menu-gtfs.jpg" alt="GTFS platform menu" loading="lazy"><figcaption>Menu</figcaption></figure>
-        <figure><img src="images/gtfs-bari.jpg" alt="Bari stops and routes map" loading="lazy"><figcaption>Map — Bari</figcaption></figure>
-        <figure><img src="images/biglietto.jpg" alt="Digital ticket with signed QR" loading="lazy"><figcaption>Ticket</figcaption></figure>
-      </div>
-      <div class="bot">
-        <span>Signed QR validation</span>
-        <a href="https://github.com/LorenzoVicino/gtfs-multicity-ticketing" target="_blank" rel="noopener">github.com/LorenzoVicino/gtfs-multicity-ticketing →</a>
-      </div>
+    <div class="projects">
+      <article class="marq" id="repo-control">
+        <div class="top">
+          <span>Project №01</span>
+          <span>TypeScript · React · Fastify · Docker</span>
+        </div>
+        <div class="lead">
+          <h2>A local-first command center for every repository.</h2>
+          <p>repo-control turns a workspace folder into a live operational view: repository health, scoped Git and branch actions, terminal and Docker tools, plus visual automations that can be inspected before they run. Everything stays on the local machine and inside the selected repository boundary.</p>
+        </div>
+        <div class="rail">
+          <div class="cell"><div class="k">Workspace</div>Clean, modified, ahead and behind state across every repository</div>
+          <div class="cell"><div class="k">Operations</div>Scoped Git, branches, terminal, VS Code and Docker Compose</div>
+          <div class="cell"><div class="k">Automations</div>Visual workflows with dry runs, reusable nodes and run history</div>
+        </div>
+        <figure class="demo">
+          <img src="images/repo-control-demo.gif" alt="repo-control demo showing the dashboard, repository search, Git workspace and visual automations" loading="lazy" width="960" height="540">
+          <figcaption>Dashboard · Repository search · Git workspace · Visual automations</figcaption>
+        </figure>
+        <div class="bot">
+          <span>v0.2.0 · MIT · Local-first</span>
+          <a href="https://github.com/LorenzoVicino/repo-control" target="_blank" rel="noopener">github.com/LorenzoVicino/repo-control →</a>
+        </div>
+      </article>
+
+      <article class="marq" id="gtfs-hub">
+        <div class="top">
+          <span>Project №02</span>
+          <span>PostgreSQL · Next.js · Docker · GTFS</span>
+        </div>
+        <div class="lead">
+          <h2>A multi-city platform for public transport.</h2>
+          <p>Schedules, itinerary handling with transfers, and digital ticket purchase and signed QR validation — joined by a city-scoped PostgreSQL model and a full-stack Next.js app. Started in 2026 as my university thesis project, and still actively in development.</p>
+        </div>
+        <div class="rail">
+          <div class="cell"><div class="k">Data</div>City-scoped PostgreSQL model, GTFS import via zip</div>
+          <div class="cell"><div class="k">App</div>Next.js, catalog generation, map of stops &amp; routes</div>
+          <div class="cell"><div class="k">APIs</div>departures · bookings · itineraries · purchase · validate</div>
+        </div>
+        <div class="shots">
+          <figure><img src="images/menu-gtfs.jpg" alt="GTFS platform menu" loading="lazy"><figcaption>Menu</figcaption></figure>
+          <figure><img src="images/gtfs-bari.jpg" alt="Bari stops and routes map" loading="lazy"><figcaption>Map — Bari</figcaption></figure>
+          <figure><img src="images/biglietto.jpg" alt="Digital ticket with signed QR" loading="lazy"><figcaption>Ticket</figcaption></figure>
+        </div>
+        <div class="bot">
+          <span>Signed QR validation</span>
+          <a href="https://github.com/LorenzoVicino/gtfs-multicity-ticketing" target="_blank" rel="noopener">github.com/LorenzoVicino/gtfs-multicity-ticketing →</a>
+        </div>
+      </article>
     </div>
   </section>
 
