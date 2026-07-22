@@ -14,7 +14,7 @@
     --rule:#111111; --rule-soft:#e4e4e4; --accent:#e63321; --accent-ink:#ffffff;
     --font-sans:"Inter Tight","Helvetica Neue",Helvetica,Arial,sans-serif;
     --font-mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
-    --pad-x: clamp(20px, 4vw, 56px); --max: 1280px;
+    --pad-x: clamp(16px, 2vw, 40px);
   }
   *{box-sizing:border-box} html,body{margin:0;padding:0}
   body{
@@ -23,7 +23,7 @@
   }
   a{color:inherit}
   ::selection{background:var(--accent); color:var(--accent-ink)}
-  .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad-x)}
+  .wrap{width:100%; padding:0 var(--pad-x)}
   .nav{padding:28px 0 16px; border-bottom:1px solid var(--rule); margin-bottom:clamp(32px,5vw,56px); font-size:16px; font-weight:500; letter-spacing:-0.01em}
   .nav a{text-decoration:none; color:var(--ink)}
   .nav .sub{color:var(--muted); font-weight:400; margin-left:6px}
