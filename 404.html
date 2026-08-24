@@ -1,59 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Page not found.">
-<title>404 | Lorenzo Vicino</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#ffffff; --ink:#111111; --muted:#6b6b6b;
-    --rule:#111111; --rule-soft:#e4e4e4; --accent:#e63321; --accent-ink:#ffffff;
-    --font-sans:"Inter Tight","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
-    --pad-x: clamp(16px, 2vw, 40px);
-  }
-  *{box-sizing:border-box} html,body{margin:0;padding:0}
-  body{
-    background:var(--bg); color:var(--ink); font-family:var(--font-sans);
-    font-size:15px; line-height:1.5; -webkit-font-smoothing:antialiased;
-  }
-  a{color:inherit}
-  ::selection{background:var(--accent); color:var(--accent-ink)}
-  .wrap{width:100%; padding:0 var(--pad-x)}
-  .nav{padding:28px 0 16px; border-bottom:1px solid var(--rule); margin-bottom:clamp(32px,5vw,56px); font-size:16px; font-weight:500; letter-spacing:-0.01em}
-  .nav a{text-decoration:none; color:var(--ink)}
-  .nav .sub{color:var(--muted); font-weight:400; margin-left:6px}
-  .hero{padding:clamp(40px,8vw,120px) 0}
-  .hero .code{font-family:var(--font-mono); font-size:13px; font-weight:500; letter-spacing:0.04em; color:var(--muted); margin-bottom:12px}
-  .hero h1{margin:0 0 16px; font-size:clamp(32px,5vw,56px); line-height:1; letter-spacing:-0.035em; font-weight:500}
-  .hero p{margin:0 0 24px; font-size:15px; color:var(--muted); max-width:36ch}
-  .hero a{text-decoration:none; font-size:13px; font-family:var(--font-mono); letter-spacing:0.02em; border-bottom:1px solid var(--rule-soft); padding-bottom:2px; transition:border-color .15s, color .15s}
-  .hero a:hover{color:var(--accent); border-bottom-color:var(--accent)}
-  .foot{padding:22px 0 32px; border-top:1px solid var(--rule); margin-top:clamp(40px,5vw,64px); font-size:11px; color:var(--muted); letter-spacing:0.06em; text-transform:uppercase; font-family:var(--font-mono)}
-  body.dark{--bg:#0f0f10; --ink:#ececea; --muted:#7a7a7a; --rule:#ececea; --rule-soft:#2a2a2c}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#11182c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Pagina non trovata — Lorenzo Vicino</title>
 </head>
 <body>
-<div class="wrap">
-  <div class="nav"><a href="/">Lorenzo Vicino<span class="sub">— Software engineer</span></a></div>
-  <div class="hero">
-    <div class="code">404</div>
-    <h1>That page is not here.</h1>
-    <p>Try the homepage instead — everything lives on one page now.</p>
-    <a href="/">← Back to index</a>
-  </div>
-  <footer class="foot">© 2026 Lorenzo Vicino</footer>
-</div>
-<script>
-  try {
-    var saved = localStorage.getItem('lv-theme');
-    var dark = saved === 'dark' || (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    if (dark) document.body.classList.add('dark');
-  } catch(e){}
-</script>
+  <main class="error-page">
+    <div class="container error-inner">
+      <p class="error-code">404 / Fuori percorso</p>
+      <h1>Questa pagina non c'è.<br>Il portfolio sì.</h1>
+      <p>Il link potrebbe essere cambiato oppure la pagina non è mai esistita.</p>
+      <a class="button button-inverse" href="/">Torna alla home <span aria-hidden="true">→</span></a>
+    </div>
+  </main>
 </body>
 </html>

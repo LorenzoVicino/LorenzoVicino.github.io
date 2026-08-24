@@ -1,31 +1,33 @@
-# Lorenzo Vicino
+# Lorenzo Vicino — Portfolio
 
-Minimal personal website built with plain HTML and CSS.
+Portfolio personale statico, progettato per presentare in modo guidato profilo, competenze, progetti e formazione.
 
-## Structure
+## Struttura
 
-- `index.html` home page
-- `about.html` short profile and working approach
-- `projects.html` selected work
-- `blog.html` short notes
-- `404.html` fallback page
-- `css/style.css` shared styles
+- `index.html` — contenuti, metadati SEO e struttura semantica
+- `css/style.css` — design system, layout responsive e temi
+- `js/main.js` — tema chiaro/scuro, navigazione attiva e menu mobile
+- `images/` — anteprime dei progetti
+- `404.html` — pagina di errore coordinata al portfolio
 
-## Direction
+## Caratteristiche
 
-The site is intentionally simple:
+- HTML, CSS e JavaScript senza framework o build step
+- design responsive da 375 px in su
+- tema chiaro/scuro con preferenza persistente
+- navigazione da tastiera, skip link e focus visibile
+- supporto a `prefers-reduced-motion`
+- canonical, Open Graph, Twitter Card e dati strutturati `Person`/`ProfilePage`
+- sitemap XML e robots.txt per l'indicizzazione
 
-- no framework
-- no JavaScript
-- no build step
-- no animation-heavy UI
+## Anteprima locale
 
-The goal is a quiet, text-first portfolio that is easy to maintain and easy to read.
+```bash
+python3 -m http.server 8000
+```
 
-## Local preview
+Apri `http://localhost:8000` nel browser.
 
-Open `index.html` directly in a browser, or start a small static server from the repository root.
+## Pubblicazione e indicizzazione
 
-## Deployment
-
-The site is designed for GitHub Pages and is served from the repository root.
+Il sito è servito dalla root del repository tramite GitHub Pages. Dopo il deploy, registra la proprietà in Google Search Console e invia `https://lorenzovicino.github.io/sitemap.xml`.

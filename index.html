@@ -1,832 +1,348 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Lorenzo Vicino — software engineer building clear, durable software for the web. Based in Gravina in Puglia, Italy.">
-<meta name="author" content="Lorenzo Vicino">
-<meta property="og:title" content="Lorenzo Vicino — Software engineer">
-<meta property="og:description" content="Clear, durable software for the web.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://lorenzovicino.github.io">
-<title>Lorenzo Vicino — Software engineer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#ffffff;
-    --ink:#111111;
-    --ink-soft:#333333;
-    --muted:#6b6b6b;
-    --rule:#111111;
-    --rule-soft:#e4e4e4;
-    --accent:#e63321;
-    --accent-ink:#ffffff;
-    --panel:#f2f2ef;
-    --panel-ink:#111111;
-    --panel-rule:rgba(17,17,17,.18);
-    --panel-muted:rgba(17,17,17,.56);
-    --panel-subtle:rgba(17,17,17,.74);
-    --panel-faint:rgba(17,17,17,.3);
-    --panel-media:#ffffff;
-    --font-sans:"Inter Tight","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
-    --font-serif:"Instrument Serif",Georgia,serif;
-    --pad-x: clamp(16px, 2vw, 40px);
-    --gut: clamp(12px, 1.6vw, 24px);
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lorenzo Vicino è un software engineer full-stack specializzato in React, Java, Spring e PostgreSQL. Scopri competenze, formazione e progetti.">
+  <meta name="author" content="Lorenzo Vicino">
+  <meta name="theme-color" content="#f7f8fb">
+  <meta property="og:title" content="Lorenzo Vicino — Software Engineer">
+  <meta property="og:description" content="Progetto software chiaro, solido e facile da evolvere.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lorenzovicino.github.io/">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Lorenzo Vicino — Portfolio">
+  <meta property="og:image" content="https://lorenzovicino.github.io/images/repo-control-demo.gif">
+  <meta property="og:image:type" content="image/gif">
+  <meta property="og:image:width" content="960">
+  <meta property="og:image:height" content="540">
+  <meta property="og:image:alt" content="Il progetto repo-control di Lorenzo Vicino">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lorenzo Vicino — Software Engineer">
+  <meta name="twitter:description" content="Software engineer full-stack. Formazione, competenze e progetti tra frontend, backend e developer tooling.">
+  <meta name="twitter:image" content="https://lorenzovicino.github.io/images/repo-control-demo.gif">
+  <meta name="twitter:image:alt" content="Il progetto repo-control di Lorenzo Vicino">
+  <link rel="canonical" href="https://lorenzovicino.github.io/">
+  <link rel="alternate" hreflang="it" href="https://lorenzovicino.github.io/">
+  <link rel="alternate" hreflang="x-default" href="https://lorenzovicino.github.io/">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+  <title>Lorenzo Vicino | Software Engineer Full-Stack</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://lorenzovicino.github.io/#website",
+        "url": "https://lorenzovicino.github.io/",
+        "name": "Lorenzo Vicino — Portfolio",
+        "inLanguage": "it-IT",
+        "publisher": { "@id": "https://lorenzovicino.github.io/#person" }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://lorenzovicino.github.io/#profilepage",
+        "url": "https://lorenzovicino.github.io/",
+        "name": "Lorenzo Vicino | Software Engineer Full-Stack",
+        "description": "Portfolio professionale di Lorenzo Vicino: profilo, competenze, formazione e progetti software.",
+        "dateModified": "2026-08-24",
+        "inLanguage": "it-IT",
+        "isPartOf": { "@id": "https://lorenzovicino.github.io/#website" },
+        "mainEntity": { "@id": "https://lorenzovicino.github.io/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://lorenzovicino.github.io/#person",
+        "name": "Lorenzo Vicino",
+        "url": "https://lorenzovicino.github.io/",
+        "jobTitle": "Software Engineer Full-Stack",
+        "description": "Software engineer full-stack con competenze in frontend, backend, dati e developer tooling.",
+        "worksFor": { "@type": "Organization", "name": "Macnil GT Alarm" },
+        "homeLocation": { "@type": "Place", "name": "Gravina in Puglia, Italia" },
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Laurea triennale L-31 in Informatica per il Digital Business"
+        },
+        "knowsAbout": ["TypeScript", "React", "Next.js", "Java", "Spring", "PostgreSQL", "Docker", "Software architecture"],
+        "sameAs": [
+          "https://github.com/LorenzoVicino",
+          "https://www.linkedin.com/in/lorenzo-vicino/"
+        ]
+      }
+    ]
   }
-  *{box-sizing:border-box}
-  html,body{margin:0;padding:0}
-  body{
-    background:var(--bg);
-    color:var(--ink);
-    font-family:var(--font-sans);
-    font-size:15px;
-    line-height:1.5;
-    letter-spacing:-0.005em;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
-  }
-  a{color:inherit}
-  ::selection{background:var(--accent); color:var(--accent-ink)}
-
-  .wrap{width:100%; padding:0 var(--pad-x)}
-  .g12{display:grid; grid-template-columns:repeat(12, 1fr); column-gap:var(--gut)}
-
-  /* NAV */
-  .nav{
-    padding:28px 0 16px;
-    border-bottom:1px solid var(--rule);
-    margin-bottom:0;
-    align-items:baseline;
-  }
-  .nav .brand{grid-column:1 / span 5; font-size:16px; font-weight:500; letter-spacing:-0.01em}
-  .nav .brand .sub{color:var(--muted); font-weight:400; margin-left:6px}
-  .nav .links{grid-column:6 / span 7; display:flex; justify-content:flex-end; gap:clamp(14px,2.2vw,28px); font-size:13px}
-  .nav .links a{text-decoration:none; padding:4px 0; color:var(--ink); position:relative}
-  .nav .links a:hover{color:var(--accent)}
-  .nav .links a .n{font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-right:6px; transition:color .15s}
-  .nav .links a:hover .n{color:var(--accent)}
-  .nav .links a.active{color:var(--accent)}
-  .nav .links a.active .n{color:var(--accent)}
-  .theme-toggle{
-    background:transparent; border:1px solid var(--rule-soft);
-    width:30px; height:30px; padding:0; margin-left:4px;
-    display:inline-flex; align-items:center; justify-content:center;
-    cursor:pointer; color:var(--ink);
-    transition:border-color .15s, color .15s, background .15s;
-    border-radius:0;
-  }
-  .theme-toggle:hover{border-color:var(--ink); color:var(--accent)}
-  .theme-toggle .icon-moon{display:none}
-  body.dark .theme-toggle .icon-sun{display:none}
-  body.dark .theme-toggle .icon-moon{display:block}
-  @media (max-width:720px){
-    .nav{grid-template-columns:1fr}
-    .nav .brand,.nav .links{grid-column:1 / -1}
-    .nav .links{justify-content:flex-start; margin-top:10px; flex-wrap:wrap}
-  }
-
-  /* SECTION ROW */
-  .row{
-    padding: clamp(28px,4vw,40px) 0;
-    border-top:1px solid var(--rule);
-  }
-  .row.noborder{border-top:none; padding-top:0}
-  .idx{grid-column:1 / span 3}
-  .idxN{font-size:13px; font-weight:500; letter-spacing:0.04em; font-variant-numeric:tabular-nums}
-  .idxL{font-size:11px; color:var(--muted); margin-top:4px; letter-spacing:0.06em; text-transform:uppercase}
-  .content{grid-column:4 / span 9}
-  @media (max-width:900px){
-    .idx{grid-column:1 / -1; margin-bottom:16px; display:flex; align-items:baseline; gap:12px}
-    .idxL{margin-top:0}
-    .content{grid-column:1 / -1}
-  }
-
-  /* HERO / CV + PROJECT CAROUSEL */
-  .hero{
-    padding:clamp(24px,3vw,40px) 0 clamp(40px,5vw,72px);
-    align-items:stretch;
-  }
-  .cv-recap{
-    grid-column:1 / span 4;
-    min-width:0;
-    min-height:clamp(620px,calc(100svh - 120px),820px);
-    border-top:1px solid var(--rule);
-    padding:clamp(18px,2vw,28px) clamp(8px,1vw,16px) 0 0;
-    display:flex;
-    flex-direction:column;
-  }
-  .cv-kicker{
-    display:flex;
-    justify-content:space-between;
-    gap:16px;
-    font-family:var(--font-mono);
-    font-size:10px;
-    line-height:1.5;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--muted);
-  }
-  .cv-recap h1{
-    margin:clamp(32px,5vh,64px) 0 20px;
-    max-width:7ch;
-    font-size:clamp(48px,5vw,88px);
-    line-height:.9;
-    letter-spacing:-.05em;
-    font-weight:500;
-    text-wrap:balance;
-  }
-  .cv-recap h1 .serif{font-family:var(--font-serif); font-style:italic; font-weight:400; letter-spacing:-.02em}
-  .cv-recap h1 .accent{color:var(--accent)}
-  .cv-summary{margin:0; max-width:42ch; font-size:clamp(15px,1.2vw,18px); line-height:1.55; color:var(--ink-soft); text-wrap:pretty}
-  .cv-facts{
-    display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:0 var(--gut);
-    margin:clamp(28px,4vh,48px) 0 0;
-  }
-  .cv-fact{border-top:1px solid var(--rule-soft); padding:12px 0 14px}
-  .cv-fact.wide{grid-column:1 / -1}
-  .cv-fact dt{
-    margin:0 0 5px;
-    font-family:var(--font-mono);
-    font-size:10px;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--muted);
-  }
-  .cv-fact dd{margin:0; font-size:13px; line-height:1.45}
-  .cv-actions{display:flex; flex-wrap:wrap; gap:8px; margin-top:auto; padding-top:24px}
-  .cv-actions a{
-    min-height:44px;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:0 16px;
-    border:1px solid var(--rule);
-    text-decoration:none;
-    font-family:var(--font-mono);
-    font-size:11px;
-    letter-spacing:.04em;
-    transition:background .18s,color .18s,border-color .18s,opacity .18s;
-  }
-  .cv-actions a:first-child{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
-  .cv-actions a:first-child:hover{opacity:.82}
-  .cv-actions a:hover{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
-  .dot{display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--accent); margin-right:8px; vertical-align:middle; transform:translateY(-1px)}
-
-  .project-carousel{
-    grid-column:5 / span 8;
-    min-width:0;
-    min-height:clamp(620px,calc(100svh - 120px),820px);
-    background:var(--panel);
-    color:var(--panel-ink);
-    display:flex;
-    flex-direction:column;
-    overflow:hidden;
-    outline:none;
-  }
-  .project-carousel:focus-visible{box-shadow:0 0 0 3px var(--accent)}
-  .carousel-head{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-    min-height:52px;
-    padding:0 clamp(18px,2vw,30px);
-    border-bottom:1px solid var(--panel-rule);
-    font-family:var(--font-mono);
-    font-size:10px;
-    letter-spacing:.09em;
-    text-transform:uppercase;
-    color:var(--panel-muted);
-  }
-  .carousel-counter{font-variant-numeric:tabular-nums}
-  .carousel-viewport{flex:1; min-height:0}
-  .carousel-slide{
-    height:100%;
-    padding:clamp(18px,2vw,30px);
-    display:grid;
-    grid-template-rows:minmax(0,1fr) auto;
-    gap:clamp(18px,2vw,28px);
-  }
-  .carousel-slide[hidden]{display:none}
-  .carousel-media{
-    min-width:0;
-    min-height:0;
-    background:var(--panel-media);
-    border:1px solid var(--panel-rule);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-  }
-  .carousel-media img{width:100%; height:100%; min-height:0; object-fit:contain; display:block}
-  .carousel-copy{display:grid; grid-template-columns:minmax(0,1fr) minmax(180px,34%); gap:var(--gut); align-items:end}
-  .carousel-copy .eyebrow{
-    margin-bottom:8px;
-    font-family:var(--font-mono);
-    font-size:10px;
-    letter-spacing:.09em;
-    text-transform:uppercase;
-    color:var(--panel-muted);
-  }
-  .carousel-copy h2{margin:0; font-size:clamp(34px,4vw,64px); line-height:.95; letter-spacing:-.04em; font-weight:500}
-  .carousel-description{align-self:end}
-  .carousel-description p{margin:0 0 14px; max-width:42ch; color:var(--panel-subtle); font-size:13px; line-height:1.55}
-  .carousel-description a{
-    display:inline-flex;
-    align-items:center;
-    min-height:44px;
-    color:var(--panel-ink);
-    text-decoration:none;
-    font-family:var(--font-mono);
-    font-size:10px;
-    letter-spacing:.05em;
-    text-transform:uppercase;
-    border-bottom:1px solid var(--panel-faint);
-  }
-  .carousel-description a:hover{color:var(--accent); border-bottom-color:var(--accent)}
-  .carousel-controls{
-    min-height:60px;
-    display:grid;
-    grid-template-columns:60px 1fr 60px;
-    align-items:center;
-    border-top:1px solid var(--panel-rule);
-  }
-  .carousel-arrow{
-    width:60px;
-    height:60px;
-    border:0;
-    border-radius:0;
-    background:transparent;
-    color:var(--panel-ink);
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    cursor:pointer;
-    transition:background .18s,color .18s;
-  }
-  .carousel-arrow:first-child{border-right:1px solid var(--panel-rule)}
-  .carousel-arrow:last-child{border-left:1px solid var(--panel-rule)}
-  .carousel-arrow:hover{background:var(--accent); color:var(--accent-ink)}
-  .carousel-arrow:focus-visible,.carousel-dot:focus-visible{outline:2px solid var(--accent); outline-offset:-4px}
-  .carousel-dots{display:flex; justify-content:center; align-items:center; gap:2px}
-  .carousel-dot{
-    width:44px;
-    height:44px;
-    padding:0;
-    border:0;
-    background:transparent;
-    cursor:pointer;
-    position:relative;
-  }
-  .carousel-dot::after{
-    content:"";
-    position:absolute;
-    left:10px;
-    right:10px;
-    top:21px;
-    height:1px;
-    background:var(--panel-faint);
-    transition:background .18s,height .18s;
-  }
-  .carousel-dot.is-active::after{height:3px; top:20px; background:var(--accent)}
-  .sr-only{
-    position:absolute;
-    width:1px;
-    height:1px;
-    padding:0;
-    margin:-1px;
-    overflow:hidden;
-    clip:rect(0,0,0,0);
-    white-space:nowrap;
-    border:0;
-  }
-  @media (max-width:900px){
-    .cv-recap,.project-carousel{grid-column:1 / -1; min-height:0}
-    .cv-recap{padding-right:0; margin-bottom:24px}
-    .cv-recap h1{max-width:9ch}
-    .cv-actions{margin-top:24px}
-    .project-carousel{min-height:680px}
-  }
-  @media (max-width:620px){
-    .cv-kicker{flex-direction:column; gap:2px}
-    .cv-recap h1{margin-top:32px}
-    .carousel-slide{grid-template-rows:auto auto}
-    .carousel-media{aspect-ratio:16/9}
-    .carousel-copy{grid-template-columns:1fr; align-items:start}
-    .carousel-copy h2{font-size:clamp(34px,11vw,48px)}
-    .carousel-description{align-self:start}
-    .project-carousel{min-height:0}
-  }
-  @media (prefers-reduced-motion:reduce){
-    *,*::before,*::after{scroll-behavior:auto!important; transition-duration:.01ms!important}
-  }
-
-  /* ABOUT */
-  .lede{grid-column:4 / span 6; font-size:clamp(17px, 1.8vw, 19px); line-height:1.5; letter-spacing:-0.005em; margin:0; text-wrap:pretty}
-  .aside{grid-column:10 / span 3; font-size:13px; color:var(--muted); line-height:1.8; font-family:var(--font-mono)}
-  .aside .aside-label{font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-bottom:6px; padding-bottom:6px; border-bottom:1px solid var(--rule-soft)}
-  @media (max-width:900px){
-    .lede{grid-column:1 / -1}
-    .aside{grid-column:1 / -1; margin-top:16px; display:flex; flex-wrap:wrap; gap:16px; align-items:center}
-    .aside .aside-label{width:100%; margin-bottom:0; padding-bottom:6px}
-    .aside > div{white-space:nowrap}
-  }
-
-  /* FEATURED */
-  .feat-meta{margin-top:14px; font-size:13px; line-height:1.7}
-  .feat-meta .t{font-weight:500}
-  .feat-meta .s{color:var(--muted); margin-top:8px; font-size:12px; font-family:var(--font-mono); letter-spacing:0.02em}
-  .project-index{margin-top:18px; display:flex; flex-direction:column; gap:12px}
-  .project-index a{display:block; text-decoration:none; font-size:12px; line-height:1.45}
-  .project-index a:hover .project-index-title{color:var(--accent)}
-  .project-index-n{display:block; color:var(--muted); font-family:var(--font-mono); font-size:10px; letter-spacing:.08em; margin-bottom:2px}
-  .project-index-title{transition:color .15s}
-  .projects{grid-column:4 / span 9; display:grid; gap:clamp(24px, 3vw, 40px)}
-  .marq{
-    background:var(--panel); color:var(--panel-ink);
-    padding:clamp(24px, 3vw, 40px);
-    display:grid; grid-template-columns:repeat(6, 1fr); column-gap:var(--gut); row-gap:clamp(16px,2vw,24px);
-    min-height: 380px;
-    position:relative;
-  }
-  .marq .top, .marq .bot{
-    grid-column:1 / -1;
-    display:flex; justify-content:space-between; align-items:baseline;
-    font-size:11px; letter-spacing:0.08em; color:var(--panel-muted); text-transform:uppercase;
-    font-family:var(--font-mono);
-    padding-bottom:12px; border-bottom:1px solid var(--panel-rule);
-  }
-  .marq .bot{border-bottom:none; border-top:1px solid var(--panel-rule); padding-top:14px; padding-bottom:0; margin-top:auto}
-  .marq .lead{grid-column:1 / span 4}
-  .marq .lead h2{
-    margin:0 0 14px;
-    font-size: clamp(30px, 3.6vw, 44px);
-    line-height:1.02; letter-spacing:-0.025em; font-weight:500;
-    text-wrap:balance;
-  }
-  .marq .lead p{margin:0; font-size:14px; line-height:1.6; color:var(--panel-subtle); max-width:46ch}
-  .marq .rail{grid-column:5 / span 2; display:flex; flex-direction:column; gap:14px; font-size:12px; line-height:1.5; color:var(--panel-subtle)}
-  .marq .rail .cell{border-left:1px solid var(--panel-rule); padding-left:12px}
-  .marq .rail .cell .k{font-family:var(--font-mono); color:var(--panel-muted); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px}
-  .marq .bot a{color:var(--panel-ink); text-decoration:none; letter-spacing:0.02em}
-  .marq .bot a:hover{color:var(--accent)}
-  .marq .shots{grid-column:1 / -1; display:grid; grid-template-columns:repeat(3,1fr); gap:var(--gut); margin-top:8px}
-  .marq .shots figure{margin:0; display:flex; flex-direction:column; gap:8px}
-  .marq .shots img{width:100%; aspect-ratio:4/3; object-fit:cover; display:block; background:var(--panel-media); border:1px solid var(--panel-rule)}
-  .marq .shots figcaption{font-family:var(--font-mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--panel-muted)}
-  .marq .demo{grid-column:1 / -1; min-width:0; margin:8px 0 0; display:flex; flex-direction:column; gap:8px}
-  .marq .demo img{width:100%; height:auto; object-fit:contain; display:block; background:var(--panel-media); border:1px solid var(--panel-rule)}
-  .marq .demo figcaption{font-family:var(--font-mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--panel-muted)}
-  .marq[id]{scroll-margin-top:20px}
-  @media (max-width:900px){
-    .projects{grid-column:1 / -1}
-    .feat-meta{grid-column:1 / -1 !important}
-    .marq .lead{grid-column:1 / -1}
-    .marq .rail{grid-column:1 / -1; flex-direction:row; flex-wrap:wrap; gap:20px}
-    .marq .rail .cell{flex:1 1 220px}
-    .marq .top, .marq .bot{flex-direction:column; gap:6px; align-items:flex-start}
-    .marq .shots{grid-template-columns:1fr}
-  }
-
-  /* STACK TABLE */
-  .tbl{width:100%; border-collapse:collapse; font-size:14px; font-variant-numeric:tabular-nums}
-  .tbl th{
-    text-align:left; font-weight:500; color:var(--muted);
-    font-size:11px; letter-spacing:0.08em; text-transform:uppercase;
-    padding:12px 8px 12px 0; border-bottom:1px solid var(--rule);
-    font-family:var(--font-mono);
-  }
-  .tbl td{padding:16px 8px 16px 0; border-bottom:1px solid var(--rule-soft); vertical-align:top}
-  .tbl tr td:last-child, .tbl tr th:last-child{padding-right:0}
-  .tbl tr:last-child td{border-bottom:1px solid var(--rule)}
-  @media (max-width:640px){
-    .tbl th:nth-child(3),.tbl td:nth-child(3){display:none}
-  }
-
-  /* NOTES */
-  .notes-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:var(--gut)}
-  @media (max-width:900px){ .notes-grid{grid-template-columns:1fr 1fr} }
-  @media (max-width:620px){ .notes-grid{grid-template-columns:1fr} }
-  .note{border-top:1px solid var(--rule); padding-top:14px}
-  .note .meta{
-    display:flex; justify-content:space-between;
-    font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted);
-    margin-bottom:10px; font-family:var(--font-mono);
-  }
-  .note h3{margin:0 0 8px; font-size:20px; line-height:1.2; letter-spacing:-0.015em; font-weight:500; text-wrap:balance}
-  .note p{margin:0; font-size:13.5px; line-height:1.55; color:var(--ink-soft); text-wrap:pretty}
-
-  /* CONTACT */
-  .cta{
-    font-size: clamp(28px, 4vw, 44px);
-    line-height:1.05; letter-spacing:-0.025em; font-weight:500; margin:0; text-wrap:balance; max-width:16ch;
-  }
-  .cta .serif{font-family:var(--font-serif); font-style:italic; font-weight:400}
-  .contact-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:var(--gut); margin-top:clamp(24px, 3vw, 40px); font-size:14px}
-  .contact-grid .k{font-size:11px; color:var(--muted); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:6px; font-family:var(--font-mono)}
-  .contact-grid a{text-decoration:none; border-bottom:1px solid transparent; transition:border-color .15s, color .15s}
-  .contact-grid a:hover{color:var(--accent); border-bottom-color:var(--accent)}
-  @media (max-width:720px){ .contact-grid{grid-template-columns:1fr 1fr} }
-
-  /* FOOTER */
-  .foot{
-    display:grid; grid-template-columns:repeat(12,1fr); column-gap:var(--gut);
-    padding:22px 0 32px; border-top:1px solid var(--rule); margin-top: clamp(40px, 5vw, 64px);
-    font-size:11px; color:var(--muted); letter-spacing:0.06em; text-transform:uppercase;
-    font-family:var(--font-mono);
-  }
-  .foot .a{grid-column:1 / span 6}
-  .foot .b{grid-column:7 / span 6; text-align:right}
-  @media (max-width:620px){ .foot .a,.foot .b{grid-column:1/-1; text-align:left} }
-
-  /* DARK MODE */
-  body.dark{
-    --bg:#0f0f10;
-    --ink:#ececea;
-    --ink-soft:#bdbdbd;
-    --muted:#7a7a7a;
-    --rule:#ececea;
-    --rule-soft:#2a2a2c;
-    --panel:#1a1a1c;
-    --panel-ink:#ececea;
-    --panel-rule:rgba(255,255,255,.18);
-    --panel-muted:rgba(255,255,255,.55);
-    --panel-subtle:rgba(255,255,255,.78);
-    --panel-faint:rgba(255,255,255,.32);
-    --panel-media:#0b0b0c;
-  }
-</style>
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
 
-<div class="wrap">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inizio" aria-label="Lorenzo Vicino, torna all'inizio">
+        <span class="brand-mark" aria-hidden="true">LV</span>
+        <span class="brand-name">Lorenzo Vicino</span>
+      </a>
 
-  <!-- NAV -->
-  <nav class="g12 nav">
-    <div class="brand">Lorenzo Vicino<span class="sub">— Software engineer</span></div>
-    <div class="links">
-      <a href="#index" data-nav="index" class="active"><span class="n">00</span>Index</a>
-      <a href="#about" data-nav="about"><span class="n">01</span>About</a>
-      <a href="#work" data-nav="work"><span class="n">02</span>Work</a>
-      <a href="#stack" data-nav="stack"><span class="n">03</span>Stack</a>
-      <a href="#notes" data-nav="notes"><span class="n">04</span>Notes</a>
-      <a href="#contact" data-nav="contact"><span class="n">05</span>Contact</a>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark">
-        <svg class="icon-sun" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-          <circle cx="8" cy="8" r="3"/>
-          <path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M2.8 2.8l1 1M12.2 12.2l1 1M2.8 13.2l1-1M12.2 3.8l1-1"/>
-        </svg>
-        <svg class="icon-moon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z"/>
-        </svg>
-      </button>
-    </div>
-  </nav>
+      <nav class="desktop-nav" aria-label="Navigazione principale">
+        <a href="#profilo">Profilo</a>
+        <a href="#competenze">Competenze</a>
+        <a href="#progetti">Progetti</a>
+        <a href="#percorso">Percorso</a>
+      </nav>
 
-  <!-- HERO -->
-  <section class="g12 hero" id="index">
-    <div class="cv-recap">
-      <div class="cv-kicker">
-        <span>00 / Curriculum vitae</span>
-        <span>Gravina in Puglia, IT</span>
-      </div>
-      <h1>Software <span class="serif">engineer</span><span class="accent">.</span></h1>
-      <p class="cv-summary">
-        I build clear, durable software across frontend and backend, with a focus on developer tools, operational products and systems that stay readable as they grow.
-      </p>
-      <dl class="cv-facts">
-        <div class="cv-fact">
-          <dt>Currently</dt>
-          <dd>GTFleet 365<br>Macnil GT Alarm</dd>
-        </div>
-        <div class="cv-fact">
-          <dt>Education</dt>
-          <dd>BSc Computer Science<br>for Digital Business</dd>
-        </div>
-        <div class="cv-fact">
-          <dt>Focus</dt>
-          <dd>Full-stack systems<br>Developer tooling</dd>
-        </div>
-        <div class="cv-fact">
-          <dt>Status</dt>
-          <dd><span class="dot"></span>Open to work</dd>
-        </div>
-        <div class="cv-fact wide">
-          <dt>Core stack</dt>
-          <dd>TypeScript · React · Java · Spring · PostgreSQL · Docker</dd>
-        </div>
-      </dl>
-      <div class="cv-actions">
-        <a href="#contact">Contact me</a>
-        <a href="https://github.com/LorenzoVicino" target="_blank" rel="noopener">GitHub ↗</a>
-        <a href="https://linkedin.com/in/lorenzo-vicino-9152871aa" target="_blank" rel="noopener">LinkedIn ↗</a>
-      </div>
-    </div>
-
-    <div class="project-carousel" id="project-showcase" role="region" aria-roledescription="carousel" aria-label="Featured projects" tabindex="0">
-      <div class="carousel-head">
-        <span>Selected work / 2026</span>
-        <span class="carousel-counter" aria-hidden="true">01 / 02</span>
-      </div>
-      <div class="carousel-viewport">
-        <article class="carousel-slide" data-project-name="repo-control" aria-label="Project 1 of 2: repo-control">
-          <div class="carousel-media">
-            <img src="images/repo-control-demo.gif" alt="repo-control dashboard, repository search, Git workspace and visual automations" width="960" height="540">
-          </div>
-          <div class="carousel-copy">
-            <div>
-              <div class="eyebrow">Developer tooling · Local-first</div>
-              <h2>repo-control</h2>
-            </div>
-            <div class="carousel-description">
-              <p>A command center for inspecting, operating and automating multi-repository workspaces without moving control away from the local machine.</p>
-              <a href="https://github.com/LorenzoVicino/repo-control" target="_blank" rel="noopener">Explore on GitHub ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="carousel-slide" data-project-name="GTFS Multicity Ticketing" aria-label="Project 2 of 2: GTFS Multicity Ticketing" hidden>
-          <div class="carousel-media">
-            <img src="images/gtfs-bari.jpg" alt="Bari public transport stops and routes displayed on a map" width="1200" height="900" loading="lazy">
-          </div>
-          <div class="carousel-copy">
-            <div>
-              <div class="eyebrow">Public transport · University thesis</div>
-              <h2>GTFS Multicity</h2>
-            </div>
-            <div class="carousel-description">
-              <p>A multi-city platform for schedules, itineraries with transfers, digital ticket purchase and signed QR validation.</p>
-              <a href="#gtfs-hub">View project details ↓</a>
-            </div>
-          </div>
-        </article>
-      </div>
-      <div class="carousel-controls">
-        <button class="carousel-arrow carousel-prev" type="button" aria-label="Previous project">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-            <path d="M16 10H4M9 5l-5 5 5 5"/>
+      <div class="header-actions">
+        <a class="header-link" href="https://www.linkedin.com/in/lorenzo-vicino/" target="_blank" rel="me noopener noreferrer">
+          LinkedIn <span aria-hidden="true">↗</span>
+        </a>
+        <button class="theme-toggle" type="button" aria-label="Attiva il tema scuro" aria-pressed="false">
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path>
+          </svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.2 15.2A8.5 8.5 0 0 1 8.8 3.8a8.5 8.5 0 1 0 11.4 11.4Z"></path>
           </svg>
         </button>
-        <div class="carousel-dots" role="group" aria-label="Choose project">
-          <button class="carousel-dot is-active" type="button" aria-label="Show repo-control" aria-current="true"></button>
-          <button class="carousel-dot" type="button" aria-label="Show GTFS Multicity Ticketing"></button>
-        </div>
-        <button class="carousel-arrow carousel-next" type="button" aria-label="Next project">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-            <path d="M4 10h12M11 5l5 5-5 5"/>
-          </svg>
-        </button>
-      </div>
-      <p class="sr-only" id="carousel-status" aria-live="polite">Project 1 of 2: repo-control</p>
-    </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section class="g12 row" id="about">
-    <div class="idx"><div class="idxN">01</div><div class="idxL">About</div></div>
-    <p class="lede">
-      I'm a software engineer from southern Italy with a bachelor's degree in Computer Science for Digital Business (L-31). I work across frontend and backend, and I care about readable systems, steady products, and interfaces that stay out of the way. I prefer boring solutions when they're robust, and patterns only when they clarify the code instead of decorating it.
-    </p>
-    <div class="aside">
-      <div class="aside-label">Hobbies</div>
-      <div>Running</div>
-      <div>Tennis</div>
-      <div>Software architecture</div>
-    </div>
-  </section>
-
-  <!-- WORK -->
-  <section class="g12 row" id="work">
-    <div class="idx">
-      <div class="idxN">02</div><div class="idxL">Featured</div>
-      <div class="feat-meta">
-        <div class="t">Selected projects</div>
-        <div class="s">2026 — ongoing<br>Local-first tools<br>Open source</div>
-        <div class="project-index" aria-label="Featured projects">
-          <a href="#repo-control"><span class="project-index-n">№01</span><span class="project-index-title">repo-control</span></a>
-          <a href="#gtfs-hub"><span class="project-index-n">№02</span><span class="project-index-title">GTFS Multicity Ticketing</span></a>
-        </div>
+        <details class="mobile-menu">
+          <summary>Menu</summary>
+          <nav aria-label="Navigazione mobile">
+            <a href="#profilo">Profilo</a>
+            <a href="#competenze">Competenze</a>
+            <a href="#progetti">Progetti</a>
+            <a href="#percorso">Percorso</a>
+            <a href="#contatti">Contatti</a>
+          </nav>
+        </details>
       </div>
     </div>
-    <div class="projects">
-      <article class="marq" id="repo-control">
-        <div class="top">
-          <span>Project №01</span>
-          <span>TypeScript · React · Fastify · Docker</span>
-        </div>
-        <div class="lead">
-          <h2>A local-first command center for every repository.</h2>
-          <p>repo-control turns a workspace folder into a live operational view: repository health, scoped Git and branch actions, terminal and Docker tools, plus visual automations that can be inspected before they run. Everything stays on the local machine and inside the selected repository boundary.</p>
-        </div>
-        <div class="rail">
-          <div class="cell"><div class="k">Workspace</div>Clean, modified, ahead and behind state across every repository</div>
-          <div class="cell"><div class="k">Operations</div>Scoped Git, branches, terminal, VS Code and Docker Compose</div>
-          <div class="cell"><div class="k">Automations</div>Visual workflows with dry runs, reusable nodes and run history</div>
-        </div>
-        <figure class="demo">
-          <img src="images/repo-control-demo.gif" alt="repo-control demo showing the dashboard, repository search, Git workspace and visual automations" loading="lazy" width="960" height="540">
-          <figcaption>Dashboard · Repository search · Git workspace · Visual automations</figcaption>
-        </figure>
-        <div class="bot">
-          <span>v0.2.0 · MIT · Local-first</span>
-          <a href="https://github.com/LorenzoVicino/repo-control" target="_blank" rel="noopener">github.com/LorenzoVicino/repo-control →</a>
-        </div>
-      </article>
+  </header>
 
-      <article class="marq" id="gtfs-hub">
-        <div class="top">
-          <span>Project №02</span>
-          <span>PostgreSQL · Next.js · Docker · GTFS</span>
+  <main id="contenuto">
+    <section class="hero" id="inizio" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Lorenzo Vicino · Software engineer · Puglia, Italia</p>
+          <h1 id="hero-title">Software che resta <span>chiaro</span>, anche quando cresce.</h1>
+          <p class="hero-lede">Sono Lorenzo, software engineer full-stack. Trasformo problemi complessi in prodotti leggibili, solidi e facili da far evolvere — dal frontend al backend.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#progetti">Esplora i progetti <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="https://github.com/LorenzoVicino" target="_blank" rel="me noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
-        <div class="lead">
-          <h2>A multi-city platform for public transport.</h2>
-          <p>Schedules, itinerary handling with transfers, and digital ticket purchase and signed QR validation — joined by a city-scoped PostgreSQL model and a full-stack Next.js app. Started in 2026 as my university thesis project, and still actively in development.</p>
-        </div>
-        <div class="rail">
-          <div class="cell"><div class="k">Data</div>City-scoped PostgreSQL model, GTFS import via zip</div>
-          <div class="cell"><div class="k">App</div>Next.js, catalog generation, map of stops &amp; routes</div>
-          <div class="cell"><div class="k">APIs</div>departures · bookings · itineraries · purchase · validate</div>
-        </div>
-        <div class="shots">
-          <figure><img src="images/menu-gtfs.jpg" alt="GTFS platform menu" loading="lazy"><figcaption>Menu</figcaption></figure>
-          <figure><img src="images/gtfs-bari.jpg" alt="Bari stops and routes map" loading="lazy"><figcaption>Map — Bari</figcaption></figure>
-          <figure><img src="images/biglietto.jpg" alt="Digital ticket with signed QR" loading="lazy"><figcaption>Ticket</figcaption></figure>
-        </div>
-        <div class="bot">
-          <span>Signed QR validation</span>
-          <a href="https://github.com/LorenzoVicino/gtfs-multicity-ticketing" target="_blank" rel="noopener">github.com/LorenzoVicino/gtfs-multicity-ticketing →</a>
-        </div>
-      </article>
-    </div>
-  </section>
 
-  <!-- STACK -->
-  <section class="g12 row" id="stack">
-    <div class="idx"><div class="idxN">03</div><div class="idxL">Stack</div></div>
-    <div class="content">
-      <table class="tbl">
-        <thead>
-          <tr>
-            <th style="width:22%">Area</th>
-            <th>Tools</th>
-            <th style="width:24%">Use</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Frontend</td><td>HTML · CSS · JavaScript · React · Redux</td><td>Production, daily</td></tr>
-          <tr><td>Backend</td><td>Java · Spring · Node.js · REST APIs</td><td>Production, daily</td></tr>
-          <tr><td>Data</td><td>PostgreSQL · MySQL · MongoDB</td><td>Modeling &amp; ops</td></tr>
-          <tr><td>Tooling</td><td>Docker · Git · Linux</td><td>Daily</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+        <aside class="hero-panel" aria-label="Profilo in breve">
+          <div class="panel-topline">
+            <span>Profilo / 2026</span>
+            <span class="availability">Open to work</span>
+          </div>
+          <div class="panel-monogram" aria-hidden="true">LV</div>
+          <dl class="snapshot">
+            <div><dt>Oggi</dt><dd>GTFleet 365<br>Macnil GT Alarm</dd></div>
+            <div><dt>Focus</dt><dd>Full-stack<br>Developer tooling</dd></div>
+            <div><dt>Formazione</dt><dd>Informatica per il<br>Digital Business · L-31</dd></div>
+            <div><dt>Base</dt><dd>Gravina in Puglia<br>Italia</dd></div>
+          </dl>
+        </aside>
 
-  <!-- NOTES -->
-  <section class="g12 row" id="notes">
-    <div class="idx">
-      <div class="idxN">04</div><div class="idxL">Notes</div>
-      <div class="feat-meta s" style="color:var(--muted); font-family:var(--font-mono); font-size:12px; margin-top:14px">Short writing,<br>no posting schedule.</div>
-    </div>
-    <div class="content">
-      <div class="notes-grid">
-        <article class="note">
-          <div class="meta"><span>4.01 · Interface</span><span>Mar 2026</span></div>
-          <h3>Keep pages calm.</h3>
-          <p>Most websites ask for too much attention before earning it. Fewer choices, quieter layouts, and better copy usually do more than extra effects.</p>
+        <a class="scroll-cue" href="#profilo">
+          <span>Scopri il profilo</span>
+          <span class="scroll-line" aria-hidden="true"></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="profilo" aria-labelledby="profilo-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-index">01 / Profilo</p>
+          <div>
+            <h2 id="profilo-title">Un profilo tecnico.<br>Una visione di prodotto.</h2>
+            <p class="section-intro">Mi muovo tra interfacce, logica applicativa e dati con un obiettivo preciso: costruire sistemi che siano semplici da usare e, soprattutto, semplici da capire per chi li farà crescere.</p>
+          </div>
+        </div>
+
+        <div class="principles">
+          <article>
+            <span class="principle-number">01</span>
+            <h3>Chiarezza prima di tutto</h3>
+            <p>Preferisco soluzioni esplicite, codice leggibile e interfacce che non chiedano istruzioni.</p>
+          </article>
+          <article>
+            <span class="principle-number">02</span>
+            <h3>Scelte che durano</h3>
+            <p>Uso pattern e astrazioni quando riducono davvero la complessità, non per decorare il codice.</p>
+          </article>
+          <article>
+            <span class="principle-number">03</span>
+            <h3>Impatto concreto</h3>
+            <p>Collego le decisioni tecniche al prodotto: prestazioni, manutenzione ed esperienza finale.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tinted" id="competenze" aria-labelledby="competenze-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-index">02 / Competenze</p>
+          <div>
+            <h2 id="competenze-title">Dal browser al database,<br>senza perdere il filo.</h2>
+            <p class="section-intro">Un set di competenze trasversale per seguire un prodotto lungo tutto il suo percorso: esperienza utente, architettura applicativa, dati e delivery.</p>
+          </div>
+        </div>
+
+        <div class="capabilities">
+          <article class="capability">
+            <div class="capability-head">
+              <span>01</span>
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 12h32v24H8zM8 19h32M15 31l5-5-5-5M24 31h8"></path></svg>
+            </div>
+            <h3>Frontend &amp; prodotto</h3>
+            <p>Interfacce responsive, componenti riutilizzabili e flussi che rendono semplice anche un dominio complesso.</p>
+            <ul class="tag-list" aria-label="Tecnologie frontend"><li>TypeScript</li><li>React</li><li>Next.js</li><li>HTML &amp; CSS</li></ul>
+          </article>
+
+          <article class="capability">
+            <div class="capability-head">
+              <span>02</span>
+              <svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="12" rx="15" ry="6"></ellipse><path d="M9 12v12c0 3.3 6.7 6 15 6s15-2.7 15-6V12M9 24v12c0 3.3 6.7 6 15 6s15-2.7 15-6V24"></path></svg>
+            </div>
+            <h3>Backend &amp; dati</h3>
+            <p>API, logica di business e modelli dati pensati per restare coerenti mentre requisiti e carico cambiano.</p>
+            <ul class="tag-list" aria-label="Tecnologie backend"><li>Java</li><li>Spring</li><li>PostgreSQL</li><li>REST API</li></ul>
+          </article>
+
+          <article class="capability">
+            <div class="capability-head">
+              <span>03</span>
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 11h28v9H10zM10 28h28v9H10zM16 20v8M32 20v8M18 15h.01M18 32h.01"></path></svg>
+            </div>
+            <h3>Tooling &amp; delivery</h3>
+            <p>Ambienti riproducibili, automazioni e strumenti che riducono attrito nelle attività quotidiane di sviluppo.</p>
+            <ul class="tag-list" aria-label="Tecnologie di delivery"><li>Docker</li><li>Git</li><li>CI/CD</li><li>Local-first</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="progetti" aria-labelledby="progetti-title">
+      <div class="container">
+        <div class="section-heading section-heading-compact">
+          <p class="section-index">03 / Progetti</p>
+          <div><h2 id="progetti-title">Il lavoro, raccontato<br>attraverso le scelte.</h2></div>
+        </div>
+
+        <article class="project project-dark">
+          <div class="project-copy">
+            <div class="project-meta"><span>01 / Developer tool</span><span>2026 · Open source</span></div>
+            <h3>repo-control</h3>
+            <p class="project-claim">Un centro di controllo locale per tutti i repository.</p>
+            <p>Trasforma una cartella di lavoro in una vista operativa: stato dei repository, azioni Git contestuali, terminale, Docker e automazioni visuali. Tutto rimane sulla macchina e dentro i confini del repository selezionato.</p>
+            <dl class="project-facts">
+              <div><dt>Problema</dt><dd>Gestire molti repository senza perdere contesto.</dd></div>
+              <div><dt>Approccio</dt><dd>Local-first, operazioni circoscritte e dry run.</dd></div>
+              <div><dt>Stack</dt><dd>TypeScript · React · Fastify · Docker</dd></div>
+            </dl>
+            <a class="text-link text-link-light" href="https://github.com/LorenzoVicino/repo-control" target="_blank" rel="noopener noreferrer">Esplora il repository <span aria-hidden="true">↗</span></a>
+          </div>
+          <a class="project-media" href="https://github.com/LorenzoVicino/repo-control" target="_blank" rel="noopener noreferrer" aria-label="Apri repo-control su GitHub">
+            <img src="images/repo-control-demo.gif" alt="Dashboard, ricerca repository e automazioni visuali di repo-control" width="960" height="540" loading="lazy">
+          </a>
         </article>
-        <article class="note">
-          <div class="meta"><span>4.02 · Engineering</span><span>Feb 2026</span></div>
-          <h3>Readable over clever.</h3>
-          <p>I trust solutions another developer can enter quickly. Good abstractions reduce effort later; bad ones only move confusion somewhere else.</p>
-        </article>
-        <article class="note">
-          <div class="meta"><span>4.03 · Learning</span><span>Jan 2026</span></div>
-          <h3>Small projects are still the best lab.</h3>
-          <p>Where I test new ideas, revisit fundamentals, and make mistakes cheaply — before those lessons matter in production.</p>
+
+        <article class="project project-light">
+          <div class="project-copy">
+            <div class="project-meta"><span>02 / Tesi universitaria</span><span>2026 · In sviluppo</span></div>
+            <h3>GTFS Multicity</h3>
+            <p class="project-claim">Il trasporto pubblico di più città, in un solo flusso.</p>
+            <p>Una piattaforma full-stack per consultare orari e itinerari con cambi, acquistare biglietti digitali e validarli tramite QR firmato. Il progetto nasce come tesi e mette insieme dati GTFS, logica di viaggio e interfaccia.</p>
+            <dl class="project-facts">
+              <div><dt>Problema</dt><dd>Unificare reti e servizi di trasporto differenti.</dd></div>
+              <div><dt>Approccio</dt><dd>Modello dati multi-città e importazione GTFS.</dd></div>
+              <div><dt>Stack</dt><dd>Next.js · PostgreSQL · Docker · GTFS</dd></div>
+            </dl>
+            <a class="text-link" href="https://github.com/LorenzoVicino/gtfs-multicity-ticketing" target="_blank" rel="noopener noreferrer">Esplora il repository <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="project-gallery">
+            <figure class="gallery-main">
+              <img src="images/gtfs-bari.jpg" alt="Mappa di Bari con fermate e linee del trasporto pubblico" width="1913" height="1076" loading="lazy">
+              <figcaption>Mappa di rete · Bari</figcaption>
+            </figure>
+            <figure><img src="images/menu-gtfs.jpg" alt="Menu principale della piattaforma GTFS Multicity" width="1917" height="1080" loading="lazy"><figcaption>Navigazione</figcaption></figure>
+            <figure><img src="images/biglietto.jpg" alt="Biglietto digitale con QR firmato" width="1920" height="1080" loading="lazy"><figcaption>Biglietto digitale</figcaption></figure>
+          </div>
         </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section class="g12 row" id="contact">
-    <div class="idx"><div class="idxN">05</div><div class="idxL">Contact</div></div>
-    <div class="content">
-      <p class="cta">I like small, honest conversations <span class="serif">about</span> product and code.</p>
-      <div class="contact-grid">
-        <div><div class="k">GitHub</div><a href="https://github.com/LorenzoVicino" target="_blank" rel="noopener">@LorenzoVicino</a></div>
-        <div><div class="k">LinkedIn</div><a href="https://linkedin.com/in/lorenzo-vicino-9152871aa" target="_blank" rel="noopener">in/lorenzo-vicino</a></div>
-        <div><div class="k">Location</div><span>Gravina in Puglia, IT</span></div>
-        <div><div class="k">Timezone</div><span>UTC+1</span></div>
+    <section class="section section-tinted" id="percorso" aria-labelledby="percorso-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-index">04 / Percorso</p>
+          <div><h2 id="percorso-title">Esperienza e formazione,<br>nello stesso percorso.</h2></div>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <p class="timeline-date">Oggi</p><div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <p class="timeline-type">Esperienza</p>
+              <h3>Software Engineer</h3>
+              <p class="timeline-place">Macnil GT Alarm · GTFleet 365</p>
+              <p>Lavoro su un prodotto digitale in ambito fleet management, portando un approccio full-stack e una particolare attenzione alla qualità del software.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <p class="timeline-date">Laurea</p><div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <p class="timeline-type">Formazione</p>
+              <h3>Informatica per il Digital Business</h3>
+              <p class="timeline-place">Laurea triennale · Classe L-31</p>
+              <p>Una formazione che unisce fondamenti informatici e visione d'impresa. La tesi diventa GTFS Multicity, un progetto completo su mobilità e bigliettazione digitale.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <p class="timeline-date">Continua</p><div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <p class="timeline-type">Crescita</p>
+              <h3>Architettura e sperimentazione</h3>
+              <p class="timeline-place">Progetti personali · Open source</p>
+              <p>Coltivo l'interesse per l'architettura software costruendo strumenti reali, studiandone i compromessi e migliorandoli attraverso l'uso quotidiano.</p>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="foot">
-    <div class="a">© 2026 Lorenzo Vicino</div>
-    <div class="b">Set in Inter Tight · 12-col grid</div>
+    <section class="contact" id="contatti" aria-labelledby="contatti-title">
+      <div class="container contact-grid">
+        <p class="section-index section-index-light">05 / Contatti</p>
+        <div class="contact-copy">
+          <h2 id="contatti-title">Costruiamo qualcosa che valga la pena far crescere.</h2>
+          <p>Se cerchi un software engineer capace di tenere insieme prodotto, frontend e backend, raccontami il prossimo problema da risolvere.</p>
+          <div class="contact-actions">
+            <a class="button button-inverse" href="https://www.linkedin.com/in/lorenzo-vicino/" target="_blank" rel="me noopener noreferrer">Scrivimi su LinkedIn <span aria-hidden="true">↗</span></a>
+            <a class="contact-github" href="https://github.com/LorenzoVicino" target="_blank" rel="me noopener noreferrer">github.com/LorenzoVicino <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="current-year">2026</span> Lorenzo Vicino</p>
+      <p>Progettato e sviluppato in Puglia.</p>
+      <a href="#inizio">Torna su <span aria-hidden="true">↑</span></a>
+    </div>
   </footer>
-
-</div>
-
-<script>
-  // Theme: localStorage > system preference > light
-  (function() {
-    var mode = 'light';
-    try {
-      var saved = localStorage.getItem('lv-theme');
-      if (saved === 'dark' || saved === 'light') mode = saved;
-      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) mode = 'dark';
-    } catch(e){}
-    if (mode === 'dark') document.body.classList.add('dark');
-
-    document.getElementById('theme-toggle').onclick = function() {
-      var isDark = document.body.classList.toggle('dark');
-      try { localStorage.setItem('lv-theme', isDark ? 'dark' : 'light'); } catch(e){}
-    };
-  })();
-
-  // Featured projects carousel: manual controls, dots and arrow keys
-  (function() {
-    var carousel = document.getElementById('project-showcase');
-    if (!carousel) return;
-
-    var slides = Array.prototype.slice.call(carousel.querySelectorAll('.carousel-slide'));
-    var dots = Array.prototype.slice.call(carousel.querySelectorAll('.carousel-dot'));
-    var counter = carousel.querySelector('.carousel-counter');
-    var status = document.getElementById('carousel-status');
-    var current = 0;
-
-    function showProject(index) {
-      current = (index + slides.length) % slides.length;
-
-      slides.forEach(function(slide, slideIndex) {
-        slide.hidden = slideIndex !== current;
-      });
-
-      dots.forEach(function(dot, dotIndex) {
-        var active = dotIndex === current;
-        dot.classList.toggle('is-active', active);
-        if (active) dot.setAttribute('aria-current', 'true');
-        else dot.removeAttribute('aria-current');
-      });
-
-      counter.textContent = ('0' + (current + 1)).slice(-2) + ' / ' + ('0' + slides.length).slice(-2);
-      status.textContent = 'Project ' + (current + 1) + ' of ' + slides.length + ': ' + slides[current].dataset.projectName;
-    }
-
-    carousel.querySelector('.carousel-prev').addEventListener('click', function() {
-      showProject(current - 1);
-    });
-    carousel.querySelector('.carousel-next').addEventListener('click', function() {
-      showProject(current + 1);
-    });
-    dots.forEach(function(dot, dotIndex) {
-      dot.addEventListener('click', function() {
-        showProject(dotIndex);
-      });
-    });
-    carousel.addEventListener('keydown', function(event) {
-      if (event.key === 'ArrowLeft') {
-        event.preventDefault();
-        showProject(current - 1);
-      } else if (event.key === 'ArrowRight') {
-        event.preventDefault();
-        showProject(current + 1);
-      }
-    });
-  })();
-
-  // Smooth scroll + active nav tracking
-  var sections = ['index','about','work','stack','notes','contact'];
-  var navLinks = {};
-  document.querySelectorAll('.links a[data-nav]').forEach(function(a) { navLinks[a.dataset.nav] = a; });
-
-  var obs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(en) {
-      if (en.isIntersecting) {
-        Object.values(navLinks).forEach(function(a) { a.classList.remove('active'); });
-        if (navLinks[en.target.id]) navLinks[en.target.id].classList.add('active');
-      }
-    });
-  }, { rootMargin: '-40% 0px -55% 0px' });
-  sections.forEach(function(id) { var el = document.getElementById(id); if (el) obs.observe(el); });
-
-  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
-    a.addEventListener('click', function(e) {
-      var id = a.getAttribute('href').slice(1);
-      var el = document.getElementById(id);
-      if (el) { e.preventDefault(); window.scrollTo({ top: el.offsetTop - 20, behavior: 'smooth' }); history.replaceState(null, '', '#'+id); }
-    });
-  });
-</script>
-
 </body>
 </html>
