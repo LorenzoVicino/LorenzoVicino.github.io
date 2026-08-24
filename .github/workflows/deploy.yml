@@ -32,7 +32,6 @@ jobs:
           cp robots.txt site/
           cp sitemap.xml site/
           cp -r css site/
-          cp -r js site/
           cp -r images site/
 
       - name: Upload artifact

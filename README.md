@@ -1,24 +1,23 @@
-# Lorenzo Vicino — Portfolio
+# Lorenzo Vicino — sito personale
 
-Portfolio personale statico, progettato per presentare in modo guidato profilo, competenze, progetti e formazione.
+Un sito statico e volutamente semplice per raccogliere percorso, strumenti e progetti.
 
 ## Struttura
 
-- `index.html` — contenuti, metadati SEO e struttura semantica
-- `css/style.css` — design system, layout responsive e temi
-- `js/main.js` — tema chiaro/scuro, navigazione attiva e menu mobile
-- `images/` — anteprime dei progetti
-- `404.html` — pagina di errore coordinata al portfolio
+- `index.html` — contenuti, struttura semantica e metadati SEO
+- `css/style.css` — stile responsive
+- `images/` — immagini dei progetti e favicon
+- `404.html` — pagina non trovata
+- `sitemap.xml` e `robots.txt` — indicizzazione
 
-## Caratteristiche
+## Scelte
 
-- HTML, CSS e JavaScript senza framework o build step
-- design responsive da 375 px in su
-- tema chiaro/scuro con preferenza persistente
+- solo HTML e CSS
+- nessun framework
+- nessun JavaScript
+- font di sistema
+- contenuti leggibili anche senza effetti o interazioni
 - navigazione da tastiera, skip link e focus visibile
-- supporto a `prefers-reduced-motion`
-- canonical, Open Graph, Twitter Card e dati strutturati `Person`/`ProfilePage`
-- sitemap XML e robots.txt per l'indicizzazione
 
 ## Anteprima locale
 
@@ -26,8 +25,8 @@ Portfolio personale statico, progettato per presentare in modo guidato profilo, 
 python3 -m http.server 8000
 ```
 
-Apri `http://localhost:8000` nel browser.
+Poi apri `http://localhost:8000`.
 
-## Pubblicazione e indicizzazione
+## Pubblicazione
 
-Il sito è servito dalla root del repository tramite GitHub Pages. Dopo il deploy, registra la proprietà in Google Search Console e invia `https://lorenzovicino.github.io/sitemap.xml`.
+Il push su `main` avvia il workflow GitHub Pages in `.github/workflows/deploy.yml`.
