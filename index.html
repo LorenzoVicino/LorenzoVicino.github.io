@@ -1,38 +1,34 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Sito personale di Lorenzo Vicino, sviluppatore software a Gravina in Puglia. Formazione, strumenti che usa e progetti personali.">
+  <meta name="description" content="Lorenzo Vicino is a software engineer in Italy working across Java, Spring, Rust, TypeScript and React. Explore his experience, tools and open-source projects.">
   <meta name="author" content="Lorenzo Vicino">
-  <meta name="theme-color" content="#f2eee4">
-
-  <meta property="og:title" content="Lorenzo Vicino — sviluppatore software">
-  <meta property="og:description" content="Qualche parola su di me, sul mio percorso e sulle cose che costruisco.">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:title" content="Lorenzo Vicino — Software Engineer">
+  <meta property="og:description" content="Software engineer from Italy. Projects, experience and the systems I build to understand software from the inside.">
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://lorenzovicino.github.io/">
-  <meta property="og:locale" content="it_IT">
+  <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Lorenzo Vicino">
   <meta property="og:image" content="https://lorenzovicino.github.io/images/repo-control-demo.gif">
-  <meta property="og:image:type" content="image/gif">
-  <meta property="og:image:width" content="960">
-  <meta property="og:image:height" content="540">
-  <meta property="og:image:alt" content="Una schermata del progetto repo-control">
-
+  <meta property="og:image:alt" content="The repo-control project by Lorenzo Vicino">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Lorenzo Vicino — sviluppatore software">
-  <meta name="twitter:description" content="Qualche parola su di me, sul mio percorso e sulle cose che costruisco.">
+  <meta name="twitter:title" content="Lorenzo Vicino — Software Engineer">
+  <meta name="twitter:description" content="Projects, experience and the systems I build to understand software from the inside.">
   <meta name="twitter:image" content="https://lorenzovicino.github.io/images/repo-control-demo.gif">
-  <meta name="twitter:image:alt" content="Una schermata del progetto repo-control">
-
   <link rel="canonical" href="https://lorenzovicino.github.io/">
-  <link rel="alternate" hreflang="it" href="https://lorenzovicino.github.io/">
+  <link rel="alternate" hreflang="en" href="https://lorenzovicino.github.io/">
   <link rel="alternate" hreflang="x-default" href="https://lorenzovicino.github.io/">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-
-  <title>Lorenzo Vicino — sviluppatore software</title>
-
+  <script src="js/main.js" defer></script>
+  <title>Lorenzo Vicino — Software Engineer</title>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,17 +38,17 @@
         "@id": "https://lorenzovicino.github.io/#website",
         "url": "https://lorenzovicino.github.io/",
         "name": "Lorenzo Vicino",
-        "inLanguage": "it-IT",
+        "inLanguage": "en",
         "publisher": { "@id": "https://lorenzovicino.github.io/#person" }
       },
       {
         "@type": "ProfilePage",
         "@id": "https://lorenzovicino.github.io/#profilepage",
         "url": "https://lorenzovicino.github.io/",
-        "name": "Lorenzo Vicino — sviluppatore software",
-        "description": "Sito personale di Lorenzo Vicino: percorso, strumenti e progetti software.",
+        "name": "Lorenzo Vicino — Software Engineer",
+        "description": "Portfolio of Lorenzo Vicino: software engineering experience, tools and open-source projects.",
         "dateModified": "2026-08-24",
-        "inLanguage": "it-IT",
+        "inLanguage": "en",
         "isPartOf": { "@id": "https://lorenzovicino.github.io/#website" },
         "mainEntity": { "@id": "https://lorenzovicino.github.io/#person" }
       },
@@ -62,14 +58,14 @@
         "name": "Lorenzo Vicino",
         "url": "https://lorenzovicino.github.io/",
         "jobTitle": "Software Engineer",
-        "description": "Sviluppatore software con esperienza tra frontend e backend.",
+        "description": "Backend-leaning full-stack software engineer based in Italy.",
         "worksFor": { "@type": "Organization", "name": "Macnil GT Alarm" },
-        "homeLocation": { "@type": "Place", "name": "Gravina in Puglia, Italia" },
+        "homeLocation": { "@type": "Country", "name": "Italy" },
         "hasCredential": {
           "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "Laurea triennale L-31 in Informatica per il Digital Business"
+          "credentialCategory": "Bachelor's degree L-31 in Computer Science for Digital Business"
         },
-        "knowsAbout": ["TypeScript", "React", "Next.js", "Java", "Spring", "PostgreSQL", "Docker"],
+        "knowsAbout": ["Java", "Spring", "Rust", "TypeScript", "React", "PostgreSQL", "Docker", "Software architecture"],
         "sameAs": [
           "https://github.com/LorenzoVicino",
           "https://www.linkedin.com/in/lorenzo-vicino/"
@@ -80,166 +76,199 @@
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
-
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
-    <div class="page header-inner">
-      <a class="site-name" href="#inizio">Lorenzo Vicino</a>
-      <nav aria-label="Navigazione principale">
-        <a href="#chi-sono">Chi sono</a>
-        <a href="#percorso">Percorso</a>
-        <a href="#strumenti">Strumenti</a>
-        <a href="#progetti">Progetti</a>
-        <a href="#contatti">Contatti</a>
+    <div class="header-inner">
+      <a class="terminal-brand" href="#top" aria-label="Lorenzo Vicino, back to top">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>lorenzo@portfolio</span>
+        <span class="prompt-path">:~$</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#projects">ls projects</a>
+        <a href="#about">man lorenzo</a>
+        <a href="#contact">mail</a>
+        <a class="github-nav" href="https://github.com/LorenzoVicino" target="_blank" rel="me noopener noreferrer">github ↗</a>
       </nav>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><span></span><span></span></button>
     </div>
   </header>
 
-  <main id="contenuto">
-    <section class="intro page" id="inizio" aria-labelledby="titolo">
-      <p class="overline">Gravina in Puglia · Italia</p>
-      <h1 id="titolo">Lorenzo Vicino</h1>
-      <p class="role">Sviluppatore software.</p>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button class="menu-backdrop" type="button" aria-label="Close menu"></button>
+    <div class="menu-sheet" role="dialog" aria-modal="true" aria-label="Navigation">
+      <div class="sheet-handle" aria-hidden="true"></div>
+      <p class="menu-label">GO TO</p>
+      <nav aria-label="Mobile navigation">
+        <a href="#projects">ls projects/ <span>→</span></a>
+        <a href="#about">man lorenzo <span>→</span></a>
+        <a href="#contact">mail <span>→</span></a>
+        <a class="external" href="https://github.com/LorenzoVicino" target="_blank" rel="me noopener noreferrer">github <span>↗</span></a>
+        <a class="external" href="https://www.linkedin.com/in/lorenzo-vicino/" target="_blank" rel="me noopener noreferrer">linkedin <span>↗</span></a>
+      </nav>
+    </div>
+  </div>
 
-      <div class="intro-text">
-        <p>Sono Lorenzo. Lavoro sul software, un po' davanti e un po' dietro: interfacce, API, dati e gli strumenti che servono per tenere insieme tutto.</p>
-        <p>Questo sito non vuole essere una vetrina perfetta. È solo un posto semplice in cui raccolgo quello che faccio, quello che ho studiato e alcune cose che sto ancora imparando.</p>
+  <main id="main-content">
+    <section class="hero content-width" id="top" aria-labelledby="page-title">
+      <p class="command fade-in"><span>$</span> whoami</p>
+      <h1 id="page-title" class="fade-in">Lorenzo<br>Vicino<span>.</span></h1>
+      <p class="hero-copy fade-in">Software engineer from Italy. I build platforms that have to stay up — and, after hours, engines, caches and tooling that teach me why they don't.</p>
+      <div class="hero-actions fade-in">
+        <a class="button button-primary" href="#projects">ls projects/ →</a>
+        <a class="button button-secondary" href="mailto:imlorenzovicino@gmail.com">imlorenzovicino@gmail.com</a>
+        <a class="button button-muted desktop-linkedin" href="https://www.linkedin.com/in/lorenzo-vicino/" target="_blank" rel="me noopener noreferrer">linkedin ↗</a>
       </div>
-
-      <p class="plain-links">
-        <a href="https://github.com/LorenzoVicino" target="_blank" rel="me noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-        <a href="https://www.linkedin.com/in/lorenzo-vicino/" target="_blank" rel="me noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-      </p>
+      <dl class="stats fade-in">
+        <div><dt>REPOSITORIES</dt><dd>17</dd></div>
+        <div><dt>MOST USED</dt><dd>Java</dd></div>
+        <div><dt>CURRENTLY BUILDING</dt><dd class="stat-building">GTFleet 365</dd></div>
+        <div><dt>BASED IN</dt><dd>Italy</dd></div>
+      </dl>
     </section>
 
-    <section class="section page" id="chi-sono" aria-labelledby="chi-sono-titolo">
-      <p class="section-label">01 / Chi sono</p>
-      <div class="section-body prose">
-        <h2 id="chi-sono-titolo">Qualche riga su di me.</h2>
-        <p>Vivo a Gravina in Puglia e oggi lavoro come software engineer in Macnil GT Alarm, sul prodotto GTFleet 365.</p>
-        <p>Ho studiato Informatica per il Digital Business, classe L-31. Mi interessano sia il frontend sia il backend perché mi piace seguire un problema fino in fondo, non soltanto una sua parte.</p>
-        <p>Non cerco la soluzione più sorprendente. Cerco quella che riesco a capire, spiegare e mantenere anche dopo un po' di tempo. Fuori dal lavoro corro, gioco a tennis e continuo a leggere di architettura software.</p>
+    <section class="projects content-width" id="projects" aria-labelledby="projects-title">
+      <div class="section-command">
+        <h2 id="projects-title"><span>$</span> ls projects/</h2>
+        <p class="count-label"><span data-count-long>7 of 7 shown</span><span data-count-short>7/7</span></p>
       </div>
+      <div class="project-filters" role="group" aria-label="Filter projects by technology">
+        <button class="filter active" type="button" data-filter="All" aria-pressed="true">all</button>
+        <button class="filter" type="button" data-filter="Java" aria-pressed="false">java</button>
+        <button class="filter" type="button" data-filter="Rust" aria-pressed="false">rust</button>
+        <button class="filter" type="button" data-filter="CLI" aria-pressed="false">cli</button>
+        <button class="filter" type="button" data-filter="Experiment" aria-pressed="false">experiment</button>
+      </div>
+      <div class="project-list">
+        <article class="project-item" data-project data-tag="Java">
+          <button class="project-summary" type="button" aria-expanded="false" aria-controls="project-repo-control">
+            <span class="project-number">01</span>
+            <span class="project-main"><span class="project-heading"><strong>repo-control</strong><span>TOOLING</span></span><span class="project-blurb">Local-first command center for inspecting, operating and automating multi-repository workspaces.</span></span>
+            <span class="project-toggle-label"><span class="desktop-toggle">+ open</span><span class="mobile-toggle">+</span></span>
+          </button>
+          <div class="project-details" id="project-repo-control" hidden>
+            <div><h3>WHAT IT DOES</h3><p>One place to see the state of every repo on your machine — branches, dirt, ahead/behind — and to run the same operation across all of them. Desktop build in JavaFX on a Spring Boot core, so the automation layer stays testable without a UI.</p><a class="source-button desktop-source" href="https://github.com/LorenzoVicino/repo-control" target="_blank" rel="noopener noreferrer">view source ↗</a></div>
+            <div><h3>STACK</h3><ul class="stack-list"><li>Java</li><li>Spring Boot</li><li>JavaFX</li><li>Git plumbing</li></ul><h3 class="note-heading">NOTE TO SELF</h3><p class="project-note">Tooling you use daily is the only tooling you finish.</p></div>
+            <a class="source-button mobile-source" href="https://github.com/LorenzoVicino/repo-control" target="_blank" rel="noopener noreferrer">view source ↗</a>
+          </div>
+        </article>
+        <article class="project-item is-open" data-project data-tag="Java">
+          <button class="project-summary" type="button" aria-expanded="true" aria-controls="project-ludus">
+            <span class="project-number">02</span>
+            <span class="project-main"><span class="project-heading"><strong>ludus</strong><span>CHESS ENGINE</span></span><span class="project-blurb">A UCI chess engine in two acts: classical search with a hand-crafted evaluation, then an NNUE with an incrementally updated accumulator.</span></span>
+            <span class="project-toggle-label"><span class="desktop-toggle">— close</span><span class="mobile-toggle">—</span></span>
+          </button>
+          <div class="project-details" id="project-ludus">
+            <div><h3>WHAT IT DOES</h3><p>Act one is alpha-beta with the usual suspects — move ordering, transposition table, quiescence — and an evaluation written by hand. Act two replaces that evaluation with a neural net whose accumulator updates incrementally as moves are made and unmade. Measured Elo and perft results are published as a live card.</p><a class="source-button desktop-source" href="https://github.com/LorenzoVicino/ludus" target="_blank" rel="noopener noreferrer">view source ↗</a></div>
+            <div><h3>STACK</h3><ul class="stack-list"><li>Java</li><li>UCI</li><li>NNUE</li><li>perft</li></ul><h3 class="note-heading">NOTE TO SELF</h3><p class="project-note">The engine keeps its own score. Hard to argue with a number.</p></div>
+            <a class="source-button mobile-source" href="https://github.com/LorenzoVicino/ludus" target="_blank" rel="noopener noreferrer">view source ↗</a>
+          </div>
+        </article>
+        <article class="project-item" data-project data-tag="Rust">
+          <button class="project-summary" type="button" aria-expanded="false" aria-controls="project-aerugo">
+            <span class="project-number">03</span>
+            <span class="project-main"><span class="project-heading"><strong>aerugo-cache</strong><span>SYSTEMS</span></span><span class="project-blurb">A small Redis-compatible in-memory cache written in Rust to learn async systems programming.</span></span>
+            <span class="project-toggle-label"><span class="desktop-toggle">+ open</span><span class="mobile-toggle">+</span></span>
+          </button>
+          <div class="project-details" id="project-aerugo" hidden>
+            <div><h3>WHAT IT DOES</h3><p>Speaks enough of the RESP protocol that redis-cli connects and behaves. Built to understand what async runtimes actually do under load: connection handling, expiry, and the cost of every lock.</p><a class="source-button desktop-source" href="https://github.com/LorenzoVicino/aerugo-cache" target="_blank" rel="noopener noreferrer">view source ↗</a></div>
+            <div><h3>STACK</h3><ul class="stack-list"><li>Rust</li><li>tokio</li><li>RESP</li></ul><h3 class="note-heading">NOTE TO SELF</h3><p class="project-note">Compatibility is a great spec — you can't fool the real client.</p></div>
+            <a class="source-button mobile-source" href="https://github.com/LorenzoVicino/aerugo-cache" target="_blank" rel="noopener noreferrer">view source ↗</a>
+          </div>
+        </article>
+        <article class="project-item" data-project data-tag="CLI">
+          <button class="project-summary" type="button" aria-expanded="false" aria-controls="project-commands">
+            <span class="project-number">04</span>
+            <span class="project-main"><span class="project-heading"><strong>commands-cli</strong><span>CLI</span></span><span class="project-blurb">Personal CLI to save, search and run frequently used shell commands, with an fzf picker and a guided wizard.</span></span>
+            <span class="project-toggle-label"><span class="desktop-toggle">+ open</span><span class="mobile-toggle">+</span></span>
+          </button>
+          <div class="project-details" id="project-commands" hidden>
+            <div><h3>WHAT IT DOES</h3><p>The commands you retype every week become entries with placeholders. Interactive picker for speed, wizard for the ones with arguments you always get wrong.</p><a class="source-button desktop-source" href="https://github.com/LorenzoVicino/commands-cli" target="_blank" rel="noopener noreferrer">view source ↗</a></div>
+            <div><h3>STACK</h3><ul class="stack-list"><li>Shell</li><li>fzf</li><li>TUI</li></ul><h3 class="note-heading">NOTE TO SELF</h3><p class="project-note">Muscle memory is a cache. This is the write-through.</p></div>
+            <a class="source-button mobile-source" href="https://github.com/LorenzoVicino/commands-cli" target="_blank" rel="noopener noreferrer">view source ↗</a>
+          </div>
+        </article>
+        <article class="project-item" data-project data-tag="CLI">
+          <button class="project-summary" type="button" aria-expanded="false" aria-controls="project-claude">
+            <span class="project-number">05</span>
+            <span class="project-main"><span class="project-heading"><strong>claude-search</strong><span>DEV UX</span></span><span class="project-blurb">Search across Claude Code sessions and resume them.</span></span>
+            <span class="project-toggle-label"><span class="desktop-toggle">+ open</span><span class="mobile-toggle">+</span></span>
+          </button>
+          <div class="project-details" id="project-claude" hidden>
+            <div><h3>WHAT IT DOES</h3><p>Full-text search over local session history so past work is retrievable instead of lost, and a one-key resume back into the session that had the answer.</p><a class="source-button desktop-source" href="https://github.com/LorenzoVicino/claude-search" target="_blank" rel="noopener noreferrer">view source ↗</a></div>
+            <div><h3>STACK</h3><ul class="stack-list"><li>CLI</li><li>Search</li><li>Local-first</li></ul><h3 class="note-heading">NOTE TO SELF</h3><p class="project-note">Anything you can't search, you'll redo.</p></div>
+            <a class="source-button mobile-source" href="https://github.com/LorenzoVicino/claude-search" target="_blank" rel="noopener noreferrer">view source ↗</a>
+          </div>
+        </article>
+        <article class="project-item" data-project data-tag="Java">
+          <button class="project-summary" type="button" aria-expanded="false" aria-controls="project-gtfs">
+            <span class="project-number">06</span>
+            <span class="project-main"><span class="project-heading"><strong>gtfs-multicity-ticketing</strong><span>TRANSIT DATA</span></span><span class="project-blurb">Multi-city ticketing built on GTFS feeds — routes, stops and fares from real transit data.</span></span>
+            <span class="project-toggle-label"><span class="desktop-toggle">+ open</span><span class="mobile-toggle">+</span></span>
+          </button>
+          <div class="project-details" id="project-gtfs" hidden>
+            <div><h3>WHAT IT DOES</h3><p>Ingests GTFS feeds from several cities and models the ticketing on top: fare rules, zones, and journeys that cross agency boundaries.</p><a class="source-button desktop-source" href="https://github.com/LorenzoVicino/gtfs-multicity-ticketing" target="_blank" rel="noopener noreferrer">view source ↗</a></div>
+            <div><h3>STACK</h3><ul class="stack-list"><li>Java</li><li>GTFS</li><li>SQL</li></ul><h3 class="note-heading">NOTE TO SELF</h3><p class="project-note">Public data is messy on purpose. Plan for it.</p></div>
+            <a class="source-button mobile-source" href="https://github.com/LorenzoVicino/gtfs-multicity-ticketing" target="_blank" rel="noopener noreferrer">view source ↗</a>
+          </div>
+        </article>
+        <article class="project-item" data-project data-tag="Experiment">
+          <button class="project-summary" type="button" aria-expanded="false" aria-controls="project-blockchain">
+            <span class="project-number">07</span>
+            <span class="project-main"><span class="project-heading"><strong>blockchain-v1</strong><span>EXPERIMENT</span></span><span class="project-blurb">First attempt at a blockchain mechanism, built to see the data structure from the inside.</span></span>
+            <span class="project-toggle-label"><span class="desktop-toggle">+ open</span><span class="mobile-toggle">+</span></span>
+          </button>
+          <div class="project-details" id="project-blockchain" hidden>
+            <div><h3>WHAT IT DOES</h3><p>Blocks, hashing, proof of work and validation written from scratch — small enough to read end to end in one sitting.</p><a class="source-button desktop-source" href="https://github.com/LorenzoVicino/blockchain-v1" target="_blank" rel="noopener noreferrer">view source ↗</a></div>
+            <div><h3>STACK</h3><ul class="stack-list"><li>Hashing</li><li>PoW</li><li>Data structures</li></ul><h3 class="note-heading">NOTE TO SELF</h3><p class="project-note">Build the toy before you trust the paper.</p></div>
+            <a class="source-button mobile-source" href="https://github.com/LorenzoVicino/blockchain-v1" target="_blank" rel="noopener noreferrer">view source ↗</a>
+          </div>
+        </article>
+      </div>
+      <p class="more-projects">…and more on <a href="https://github.com/LorenzoVicino" target="_blank" rel="me noopener noreferrer">github.com/LorenzoVicino</a></p>
     </section>
 
-    <section class="section page" id="percorso" aria-labelledby="percorso-titolo">
-      <p class="section-label">02 / Percorso</p>
-      <div class="section-body">
-        <h2 id="percorso-titolo">Da dove arrivo.</h2>
-
-        <div class="history">
-          <article class="history-row">
-            <p class="when">Oggi</p>
-            <div>
-              <h3>Software Engineer</h3>
-              <p class="where">Macnil GT Alarm · GTFleet 365</p>
-              <p>Lavoro su un prodotto per la gestione delle flotte. È il contesto in cui metto insieme lavoro quotidiano sul codice, manutenzione e problemi reali degli utenti.</p>
-            </div>
-          </article>
-
-          <article class="history-row">
-            <p class="when">Formazione</p>
-            <div>
-              <h3>Informatica per il Digital Business</h3>
-              <p class="where">Laurea triennale · Classe L-31</p>
-              <p>Un percorso tra informatica e impresa. La tesi è diventata GTFS Multicity, il progetto sul trasporto pubblico che trovi più sotto.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section page" id="strumenti" aria-labelledby="strumenti-titolo">
-      <p class="section-label">03 / Strumenti</p>
-      <div class="section-body">
-        <h2 id="strumenti-titolo">Quello che uso.</h2>
-        <p class="section-note">Non sono etichette né una classifica. Sono semplicemente gli strumenti con cui lavoro più spesso.</p>
-
-        <dl class="tool-list">
-          <div>
-            <dt>Frontend</dt>
-            <dd>TypeScript, React, Next.js, HTML, CSS</dd>
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="content-width about-inner">
+        <h2 class="section-command simple-command" id="about-title"><span>$</span> man lorenzo</h2>
+        <dl class="manual">
+          <div class="manual-row"><dt>NAME</dt><dd>lorenzo vicino — software engineer, Italy</dd></div>
+          <div class="manual-row"><dt>DESCRIPTION</dt><dd>Backend-leaning full-stack engineer. Days are spent on a fleet-management platform where uptime, data volume and messaging matter; nights on the systems I want to understand from the inside — a chess engine, a Redis-compatible cache, a multi-repo command center. Obsessed with design patterns and with code that is boring to read on purpose.</dd></div>
+          <div class="manual-row">
+            <dt>EXPERIENCE</dt>
+            <dd class="experience-list">
+              <article><p class="when current">now</p><div><h3>GTFleet 365 — platform</h3><p>Fleet telematics platform: services, integrations and dashboards used by operators daily.</p></div></article>
+              <article><p class="when">before</p><div><h3>Full-stack projects &amp; freelance</h3><p>Order platforms, backends for mobile apps, React front-ends. Placeholder — send me the exact roles and dates and I'll drop them in.</p></div></article>
+            </dd>
           </div>
-          <div>
-            <dt>Backend</dt>
-            <dd>Java, Spring, API REST</dd>
-          </div>
-          <div>
-            <dt>Dati</dt>
-            <dd>PostgreSQL, modellazione e importazione dati</dd>
-          </div>
-          <div>
-            <dt>Lavoro quotidiano</dt>
-            <dd>Git, Docker e un terminale aperto più del necessario</dd>
-          </div>
+          <div class="manual-row"><dt>TOOLS</dt><dd><ul class="tool-list"><li>Java</li><li>Spring</li><li>Rust</li><li>C#/.NET</li><li>TypeScript</li><li>React</li><li>Redux</li><li>Next.js</li><li>Node.js</li><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>Cassandra</li><li>RabbitMQ</li><li>Docker</li><li>AWS</li><li>Linux</li><li>Figma</li></ul></dd></div>
+          <div class="manual-row see-also"><dt>SEE ALSO</dt><dd><a class="button button-secondary" href="https://github.com/LorenzoVicino" target="_blank" rel="me noopener noreferrer">github ↗</a><a class="button button-secondary" href="https://www.linkedin.com/in/lorenzo-vicino/" target="_blank" rel="me noopener noreferrer">linkedin ↗</a><a class="button button-primary" href="#contact">cv.pdf</a></dd></div>
         </dl>
       </div>
     </section>
 
-    <section class="section page" id="progetti" aria-labelledby="progetti-titolo">
-      <p class="section-label">04 / Progetti</p>
-      <div class="section-body">
-        <h2 id="progetti-titolo">Cose che sto costruendo.</h2>
-        <p class="section-note">Non sono casi studio. Sono progetti nati da un problema che avevo o da qualcosa che volevo capire meglio.</p>
-
-        <article class="project">
-          <p class="project-number">Progetto 01</p>
-          <h3>repo-control</h3>
-          <div class="project-description prose">
-            <p>È nato da un problema molto pratico: lavorando su più repository, volevo un posto unico per vedere cosa fosse pulito, modificato, avanti o indietro e per eseguire alcune operazioni senza perdere il contesto.</p>
-            <p>Resta sulla macchina locale. Dentro ci sono Git, terminale, Docker e alcune automazioni visuali. È ancora in sviluppo e cambia mentre lo uso.</p>
-          </div>
-          <p class="project-tech">TypeScript · React · Fastify · Docker</p>
-          <p><a class="source-link" href="https://github.com/LorenzoVicino/repo-control" target="_blank" rel="noopener noreferrer">Codice su GitHub <span aria-hidden="true">↗</span></a></p>
-          <figure class="project-figure">
-            <img src="images/repo-control-demo.gif" width="960" height="540" loading="lazy" alt="Dashboard e strumenti di repo-control">
-            <figcaption>Una schermata di repo-control.</figcaption>
-          </figure>
-        </article>
-
-        <article class="project">
-          <p class="project-number">Progetto 02</p>
-          <h3>GTFS Multicity</h3>
-          <div class="project-description prose">
-            <p>È il progetto della mia tesi. Prova a tenere insieme i dati del trasporto pubblico di più città: orari, itinerari con cambi, acquisto del biglietto e validazione tramite QR firmato.</p>
-            <p>Mi ha costretto a ragionare sul modello dati, sulle API e sull'interfaccia nello stesso momento. Anche questo è ancora aperto e ha diverse cose da sistemare.</p>
-          </div>
-          <p class="project-tech">Next.js · PostgreSQL · Docker · GTFS</p>
-          <p><a class="source-link" href="https://github.com/LorenzoVicino/gtfs-multicity-ticketing" target="_blank" rel="noopener noreferrer">Codice su GitHub <span aria-hidden="true">↗</span></a></p>
-
-          <div class="photo-strip">
-            <figure>
-              <img src="images/gtfs-bari.jpg" width="1913" height="1076" loading="lazy" alt="Mappa di Bari con fermate e linee del trasporto pubblico">
-              <figcaption>Mappa di Bari.</figcaption>
-            </figure>
-            <figure>
-              <img src="images/menu-gtfs.jpg" width="1917" height="1080" loading="lazy" alt="Menu del progetto GTFS Multicity">
-              <figcaption>Il menu.</figcaption>
-            </figure>
-            <figure>
-              <img src="images/biglietto.jpg" width="1920" height="1080" loading="lazy" alt="Biglietto digitale con codice QR">
-              <figcaption>Il biglietto digitale.</figcaption>
-            </figure>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section page" id="contatti" aria-labelledby="contatti-titolo">
-      <p class="section-label">05 / Contatti</p>
-      <div class="section-body prose">
-        <h2 id="contatti-titolo">Se vuoi scrivermi.</h2>
-        <p>Non ho un modulo di contatto. Mi trovi su <a href="https://www.linkedin.com/in/lorenzo-vicino/" target="_blank" rel="me noopener noreferrer">LinkedIn</a> oppure puoi dare un'occhiata a quello che pubblico su <a href="https://github.com/LorenzoVicino" target="_blank" rel="me noopener noreferrer">GitHub</a>.</p>
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="content-width contact-inner">
+        <div class="contact-copy">
+          <p class="command"><span>$</span> mail --to lorenzo</p>
+          <h2 id="contact-title">Let's talk<br>about the hard part<span>.</span></h2>
+          <p>Roles, contract work, or an argument about whether NNUE was worth it. I answer everything.</p>
+          <address class="desktop-address"><a href="mailto:imlorenzovicino@gmail.com">imlorenzovicino@gmail.com</a><br>Italy · CET</address>
+        </div>
+        <form class="contact-form" data-contact-form>
+          <label><span>FROM</span><input type="email" name="from" autocomplete="email" placeholder="you@company.com" required></label>
+          <label class="subject-field"><span>SUBJECT</span><input type="text" name="subject" placeholder="a role / a project / a question"></label>
+          <label><span>MESSAGE</span><textarea name="message" rows="5" placeholder="write here…" required></textarea></label>
+          <button type="submit">send ⏎</button>
+        </form>
+        <address class="mobile-address"><a href="mailto:imlorenzovicino@gmail.com">imlorenzovicino@gmail.com</a><br>Italy · CET</address>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="page footer-inner">
-      <p>Lorenzo Vicino · Gravina in Puglia</p>
-      <p>HTML e CSS, senza framework.</p>
-      <a href="#inizio">Torna su ↑</a>
-    </div>
+    <div class="content-width footer-inner"><span class="footer-prompt">$</span><span>exit</span><span class="cursor" aria-hidden="true"></span><span class="copyright"><span class="copyright-desktop">© 2026 Lorenzo Vicino — built by hand</span><span class="copyright-mobile">© 2026 L. Vicino</span></span></div>
   </footer>
+  <aside class="mobile-contact-bar" aria-label="Quick contact links"><a class="button button-primary" href="mailto:imlorenzovicino@gmail.com">email me</a><a class="button button-secondary" href="https://github.com/LorenzoVicino" target="_blank" rel="me noopener noreferrer">github ↗</a></aside>
 </body>
 </html>

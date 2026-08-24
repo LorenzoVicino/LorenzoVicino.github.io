@@ -1,22 +1,23 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#f2eee4">
+  <meta name="theme-color" content="#0b0b0c">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <title>Pagina non trovata — Lorenzo Vicino</title>
+  <title>Page not found — Lorenzo Vicino</title>
 </head>
 <body>
-  <main class="intro page">
-    <p class="overline">Errore 404</p>
-    <h1>Questa pagina non c'è.</h1>
-    <div class="intro-text">
-      <p>Forse il link è cambiato, forse ho sbagliato qualcosa io.</p>
-    </div>
-    <p class="plain-links"><a href="/">Torna alla pagina iniziale →</a></p>
+  <main class="error-page content-width">
+    <p class="command"><span>$</span> find /page</p>
+    <h1>404<span class="footer-prompt">.</span></h1>
+    <p>This page isn't here. The link may have moved, or I may have broken something.</p>
+    <a class="button button-primary" href="/">cd /home →</a>
   </main>
 </body>
 </html>
